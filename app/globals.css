@@ -1,26 +1,45 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #38C7D2;
+  --color-secondary: #4C239B;
+  --color-accent: #38C7D2;
+  --color-surface: #FFFFFF;
+  --color-text-main: #141624;
+  --color-bg-light: #F0F6F9;
+  
+  --font-sans: var(--font-geist-sans), "Inter", sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  background-color: #F0F6F9;
+  color: #141624;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Force light mode variables across the board */
+body {
+  background-color: #F0F6F9 !important;
+  color: #141624 !important;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+  background-color: #F0F6F9 !important;
+}
+
+::selection {
+  background-color: #4C239B;
+  color: #FFFFFF;
+}
+
+/* Removing any tailwind dark mode behavior by explicitly overriding dark media queries */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    color-scheme: light;
   }
 }
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* End of file */
