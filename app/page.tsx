@@ -228,6 +228,86 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 4.5 The Metrics (Massive Typography) */}
+      <section className="w-full py-32 bg-[#F0F6F9] overflow-hidden">
+        <div className="max-w-[1400px] mx-auto px-6 flex flex-col gap-16">
+          <div className="flex flex-col gap-4">
+             <span className="px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold w-max tracking-widest uppercase">The Impact</span>
+             <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-text-main">
+               Engineered for <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary italic pr-4">Leverage.</span>
+             </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 border-t border-primary/10 pt-16">
+            {[
+              { num: "10x", label: "Operational Velocity", sub: "Systems execute instantly, 24/7." },
+              { num: "0%", label: "Manual Data Entry", sub: "APIs don't make typos." },
+              { num: "∞", label: "Scalability", sub: "Add 10 or 10,000 users. It doesn't break." }
+            ].map((metric, i) => (
+              <motion.div 
+                key={i} 
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: i * 0.2, ease: [0.16, 1, 0.3, 1] }}
+                className="flex flex-col gap-4"
+              >
+                <span className="text-[6rem] md:text-[8rem] lg:text-[10rem] font-bold leading-none tracking-tighter text-text-main group-hover:text-primary transition-colors">
+                  {metric.num}
+                </span>
+                <div className="flex flex-col gap-1">
+                  <h3 className="text-2xl font-semibold">{metric.label}</h3>
+                  <p className="text-text-main/60">{metric.sub}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4.7 The Transformation (Old Way vs LogicWare Way) */}
+      <section className="w-full py-32 bg-white">
+        <div className="max-w-[1400px] mx-auto px-6 flex flex-col gap-16 text-center items-center">
+          <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-text-main max-w-2xl leading-tight">
+            The difference between a <span className="line-through text-text-main/30 decoration-red-500">bottleneck</span> and a <span className="text-primary italic font-semibold">breakthrough.</span>
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full mt-8">
+            
+            {/* The Old Way */}
+            <div className="bg-[#141624] text-white p-12 md:p-16 rounded-[3rem] flex flex-col items-start text-left gap-8 relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/10 blur-[100px] rounded-full pointer-events-none" />
+              <div className="px-4 py-2 rounded-full border border-red-500/30 text-red-400 font-mono text-sm tracking-widest uppercase">The Old Way</div>
+              
+              <ul className="flex flex-col gap-6 w-full">
+                {["Human team doing repetitive data entry.", "Siloed CRMs that don't talk to ERPs.", "Hiring more people to scale operations.", "Error-prone manual lead routing.", "Generic templates that break under load."].map((item, i) => (
+                  <li key={i} className="flex items-start gap-4">
+                    <XCircle size={24} className="text-red-400 shrink-0 mt-0.5" weight="duotone" />
+                    <span className="text-white/60 text-lg">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* The LogicWare Way */}
+            <div className="bg-gradient-to-br from-[#F0F6F9] to-white border border-primary/10 p-12 md:p-16 rounded-[3rem] flex flex-col items-start text-left gap-8 relative overflow-hidden shadow-2xl shadow-primary/5 group">
+              <div className="absolute bottom-0 right-0 w-64 h-64 bg-primary/10 blur-[100px] rounded-full pointer-events-none group-hover:scale-150 transition-transform duration-1000" />
+              <div className="px-4 py-2 rounded-full bg-primary/10 text-primary font-mono text-sm tracking-widest uppercase font-semibold border border-primary/20">The LogicWare Way</div>
+              
+              <ul className="flex flex-col gap-6 w-full relative z-10">
+                {["AI Agents routing and answering queries 24/7.", "Unified brain connecting HubSpot, Odoo, and APIs.", "Scaling via autonomous systems, not payroll.", "Zero-friction, zero-error data pipelines.", "Custom architecture built for absolute leverage."].map((item, i) => (
+                  <li key={i} className="flex items-start gap-4">
+                    <CheckCircle size={24} className="text-primary shrink-0 mt-0.5" weight="fill" />
+                    <span className="text-text-main text-lg font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* 5. The Integration Stack */}
       <section className="w-full py-32 bg-[#141624] text-white">
         <div className="max-w-[1400px] mx-auto px-6 flex flex-col items-center gap-16 text-center">
@@ -268,18 +348,10 @@ export default function Home() {
             Speak with our architecture team to design a custom automation roadmap for your organization.
           </p>
           
-          <form className="w-full max-w-xl flex flex-col gap-4 text-left" onSubmit={(e) => e.preventDefault()}>
-            <div className="grid grid-cols-2 gap-4">
-              <input type="text" placeholder="First Name" className="w-full px-6 py-4 rounded-2xl bg-white border border-primary/10 focus:outline-none focus:border-primary/50 transition-colors" />
-              <input type="text" placeholder="Last Name" className="w-full px-6 py-4 rounded-2xl bg-white border border-primary/10 focus:outline-none focus:border-primary/50 transition-colors" />
-            </div>
-            <input type="email" placeholder="Work Email" className="w-full px-6 py-4 rounded-2xl bg-white border border-primary/10 focus:outline-none focus:border-primary/50 transition-colors" />
-            <input type="text" placeholder="Company Name" className="w-full px-6 py-4 rounded-2xl bg-white border border-primary/10 focus:outline-none focus:border-primary/50 transition-colors" />
-            
-            <button className="w-full mt-4 px-6 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-2xl font-semibold text-lg hover:opacity-90 transition-opacity shadow-lg shadow-primary/20">
-              Request Architecture Review
-            </button>
-          </form>
+          <Link href="/contact" className="relative z-10 px-10 py-6 bg-text-main text-white rounded-2xl font-bold text-xl md:text-2xl uppercase tracking-widest hover:bg-primary transition-colors duration-500 shadow-2xl shadow-primary/20 flex items-center gap-4 group/btn mt-8">
+            <span>Request Architecture Review</span>
+            <ArrowRight weight="bold" className="group-hover/btn:translate-x-2 transition-transform duration-300" />
+          </Link>
         </div>
       </section>
     </div>

@@ -15,12 +15,12 @@ export async function submitContactForm(formData: FormData) {
 
   try {
     const transporter = nodemailer.createTransport({
-      host: "smtp.logicwaretech.com",
-      port: 465,
+      host: process.env.SMTP_HOST || "smtp.logicwaretech.com",
+      port: Number(process.env.SMTP_PORT) || 465,
       secure: true, // true for 465, false for other ports
       auth: {
-        user: "info@logicwaretech.com",
-        pass: "Swastik@1511",
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
       tls: {
         // do not fail on invalid certs
@@ -29,8 +29,8 @@ export async function submitContactForm(formData: FormData) {
     });
 
     const mailOptions = {
-      from: `"LogicWare Audit Form" <info@logicwaretech.com>`,
-      to: "info@logicwaretech.com",
+      from: `"LogicWare Audit Form" <${process.env.SMTP_USER}>`,
+      to: process.env.SMTP_USER,
       replyTo: email,
       subject: `New System Audit Request: ${objective}`,
       html: `
@@ -49,7 +49,7 @@ export async function submitContactForm(formData: FormData) {
     };
 
     const userMailOptions = {
-      from: `"LogicWare Tech" <info@logicwaretech.com>`,
+      from: `"LogicWare Tech" <${process.env.SMTP_USER}>`,
       to: email,
       subject: `System Audit Request Received`,
       html: `

@@ -26,6 +26,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
+  
+  a, button, input, select, textarea, [role="button"] {
+    cursor: none !important;
+  }
+}
+
 html {
   scroll-behavior: smooth;
   background-color: #F0F6F9 !important;

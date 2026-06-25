@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SmoothScrolling from "@/components/SmoothScrolling";
+import CustomCursor from "@/components/CustomCursor";
+import Preloader from "@/components/Preloader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,11 +34,15 @@ export default function RootLayout({
       style={{ colorScheme: 'light' }}
     >
       <body className="min-h-full flex flex-col bg-[#F0F6F9] text-[#141624]">
-        <Navbar />
-        <main className="flex-1 flex flex-col relative z-0">
-          {children}
-        </main>
-        <Footer />
+        <SmoothScrolling>
+          <Preloader />
+          <CustomCursor />
+          <Navbar />
+          <main className="flex-1 flex flex-col relative z-0">
+            {children}
+          </main>
+          <Footer />
+        </SmoothScrolling>
       </body>
     </html>
   );
