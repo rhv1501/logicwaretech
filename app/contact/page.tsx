@@ -3,14 +3,22 @@
 import { motion } from "framer-motion";
 import { ArrowRight, EnvelopeSimple, MapPin, PhoneCall } from "@phosphor-icons/react/dist/ssr";
 import { useState } from "react";
+import { submitContactForm } from "@/app/actions/contact";
 
 export default function ContactPage() {
   const [formState, setFormState] = useState("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormState("submitting");
-    setTimeout(() => setFormState("success"), 1500);
+    const formData = new FormData(e.currentTarget);
+    const result = await submitContactForm(formData);
+    if (result.success) {
+      setFormState("success");
+    } else {
+      setFormState("idle");
+      alert(result.error || "Something went wrong.");
+    }
   };
 
   return (
@@ -88,23 +96,23 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="flex flex-col gap-3">
                       <label className="text-xs font-mono uppercase tracking-widest text-text-main/40 ml-4">First Name</label>
-                      <input required type="text" className="w-full bg-[#F0F6F9] rounded-[2rem] px-6 py-5 text-lg border border-transparent focus:border-primary/30 focus:outline-none transition-colors focus:bg-white" placeholder="John" />
+                      <input name="firstName" required type="text" className="w-full bg-[#F0F6F9] rounded-[2rem] px-6 py-5 text-lg border border-transparent focus:border-primary/30 focus:outline-none transition-colors focus:bg-white" placeholder="John" />
                     </div>
                     <div className="flex flex-col gap-3">
                       <label className="text-xs font-mono uppercase tracking-widest text-text-main/40 ml-4">Last Name</label>
-                      <input required type="text" className="w-full bg-[#F0F6F9] rounded-[2rem] px-6 py-5 text-lg border border-transparent focus:border-primary/30 focus:outline-none transition-colors focus:bg-white" placeholder="Doe" />
+                      <input name="lastName" required type="text" className="w-full bg-[#F0F6F9] rounded-[2rem] px-6 py-5 text-lg border border-transparent focus:border-primary/30 focus:outline-none transition-colors focus:bg-white" placeholder="Doe" />
                     </div>
                   </div>
                   
                   <div className="flex flex-col gap-3">
                     <label className="text-xs font-mono uppercase tracking-widest text-text-main/40 ml-4">Work Email</label>
-                    <input required type="email" className="w-full bg-[#F0F6F9] rounded-[2rem] px-6 py-5 text-lg border border-transparent focus:border-primary/30 focus:outline-none transition-colors focus:bg-white" placeholder="john@enterprise.com" />
+                    <input name="email" required type="email" className="w-full bg-[#F0F6F9] rounded-[2rem] px-6 py-5 text-lg border border-transparent focus:border-primary/30 focus:outline-none transition-colors focus:bg-white" placeholder="john@enterprise.com" />
                   </div>
                   
                   <div className="flex flex-col gap-3">
                     <label className="text-xs font-mono uppercase tracking-widest text-text-main/40 ml-4">Target Objective</label>
                     <div className="relative">
-                      <select className="w-full bg-[#F0F6F9] rounded-[2rem] px-6 py-5 text-lg border border-transparent focus:border-primary/30 focus:outline-none transition-colors focus:bg-white appearance-none cursor-pointer">
+                      <select name="objective" className="w-full bg-[#F0F6F9] rounded-[2rem] px-6 py-5 text-lg border border-transparent focus:border-primary/30 focus:outline-none transition-colors focus:bg-white appearance-none cursor-pointer">
                         <option>AI Agentic Systems</option>
                         <option>ERP / CRM Automations</option>
                         <option>Web / Mobile Application</option>
@@ -118,7 +126,7 @@ export default function ContactPage() {
                   
                   <div className="flex flex-col gap-3">
                     <label className="text-xs font-mono uppercase tracking-widest text-text-main/40 ml-4">System Parameters (Optional)</label>
-                    <textarea rows={4} className="w-full bg-[#F0F6F9] rounded-[2rem] px-6 py-5 text-lg border border-transparent focus:border-primary/30 focus:outline-none transition-colors focus:bg-white resize-none" placeholder="Briefly describe your current stack and bottlenecks..." />
+                    <textarea name="parameters" rows={4} className="w-full bg-[#F0F6F9] rounded-[2rem] px-6 py-5 text-lg border border-transparent focus:border-primary/30 focus:outline-none transition-colors focus:bg-white resize-none" placeholder="Briefly describe your current stack and bottlenecks..." />
                   </div>
                   
                   <button type="submit" disabled={formState === "submitting"} className="w-full mt-4 px-6 py-6 bg-text-main text-white rounded-2xl font-bold text-xl uppercase tracking-widest hover:bg-primary transition-colors duration-500 shadow-xl overflow-hidden relative group/btn disabled:opacity-70 disabled:cursor-not-allowed">
