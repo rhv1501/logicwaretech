@@ -17,7 +17,7 @@ export default function Footer() {
           </p>
         </div>
         
-        <div className="grid grid-cols-2 gap-12 sm:grid-cols-3 md:gap-24">
+        <div className="grid grid-cols-2 gap-12 md:gap-24">
           <div className="flex flex-col gap-6">
             <span className="text-xs font-mono font-semibold uppercase tracking-widest text-white/40">Platform</span>
             <Link href="/" className="text-base font-medium hover:text-primary text-white/80 transition-colors">Home</Link>
@@ -29,17 +29,6 @@ export default function Footer() {
             <span className="text-xs font-mono font-semibold uppercase tracking-widest text-white/40">Legal</span>
             <Link href="#" className="text-base font-medium hover:text-primary text-white/80 transition-colors">Privacy Policy</Link>
             <Link href="#" className="text-base font-medium hover:text-primary text-white/80 transition-colors">Terms of Service</Link>
-          </div>
-          <div className="flex flex-col gap-6 col-span-2 sm:col-span-1">
-            <span className="text-xs font-mono font-semibold uppercase tracking-widest text-white/40">Connect</span>
-            <a href="#" className="group flex w-max items-center gap-4 rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold tracking-widest uppercase transition-all hover:bg-primary hover:border-primary">
-              LinkedIn
-              <ArrowUpRight className="text-white/50 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white" weight="bold" />
-            </a>
-            <a href="#" className="group flex w-max items-center gap-4 rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold tracking-widest uppercase transition-all hover:bg-[#a855f7] hover:border-[#a855f7]">
-              Twitter
-              <ArrowUpRight className="text-white/50 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white" weight="bold" />
-            </a>
           </div>
         </div>
       </div>

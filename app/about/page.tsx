@@ -86,6 +86,44 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* 2.5 Tech Stack / Agnostic Architecture */}
+      <section className="w-full py-24 lg:py-32 bg-text-main text-white relative overflow-hidden">
+        {/* Background Accents */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-secondary/5 blur-[120px] rounded-full pointer-events-none" />
+
+        <div className="max-w-[1400px] mx-auto px-6 relative z-10 flex flex-col gap-16">
+          <div className="flex flex-col md:flex-row justify-between items-end gap-8">
+            <div className="flex flex-col gap-4 max-w-2xl">
+              <span className="text-primary font-semibold tracking-widest uppercase text-sm">Agnostic Architecture</span>
+              <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-white leading-tight">
+                Built on modern technology.
+              </h2>
+            </div>
+            <p className="text-white/60 max-w-sm text-lg font-medium">
+              We also integrate with many other platforms and tools based on existing infra or according to client needs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              "React & Next.js",
+              "Node.js",
+              "Odoo ERP",
+              "OpenAI",
+              "n8n / Make",
+              "Tailwind CSS",
+              "PostgreSQL",
+              "AWS / Vercel"
+            ].map((tech, i) => (
+              <div key={i} className="flex items-center justify-center p-8 text-center rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-primary/50 transition-all duration-300">
+                <span className="text-xl font-medium text-white/90">{tech}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 3. Leadership */}
       <section className="w-full py-24 lg:py-32 bg-[#F0F6F9]">
         <div className="max-w-[1400px] mx-auto px-6">
