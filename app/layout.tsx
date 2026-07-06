@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans, Space_Grotesk, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -7,19 +7,26 @@ import SmoothScrolling from "@/components/SmoothScrolling";
 import CustomCursor from "@/components/CustomCursor";
 import Preloader from "@/components/Preloader";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-sans",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-serif",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "LogicWare Technology | Innovate. Automate. Elevate.",
-  description: "High-end business automation, ERP & CRM workflow automation, software development, and web design.",
+  title: "LogicWare Tech | AI Automations, ERP Solutions & Custom Web Applications",
+  description: "LogicWare Tech is a premier IT firm specializing in business workflow automations, custom AI integrations, CRM/ERP solutions, and robust web/mobile applications.",
 };
 
 export default function RootLayout({
@@ -30,11 +37,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased light`}
+      className={`${plusJakartaSans.variable} ${spaceGrotesk.variable} ${playfair.variable} h-full antialiased light`}
       style={{ colorScheme: 'light' }}
     >
-      <body className="min-h-full flex flex-col bg-[#F0F6F9] text-[#141624]">
+      <body className="min-h-full flex flex-col bg-[#FAF8F5] text-[#111111] selection:bg-[#0B2447] selection:text-white relative">
         <SmoothScrolling>
+          {/* Clean Corporate Background */}
+          <div className="fixed inset-0 pointer-events-none -z-10 bg-white" />
           <Preloader />
           <CustomCursor />
           <Navbar />

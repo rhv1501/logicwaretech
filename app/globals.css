@@ -1,55 +1,55 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #38C7D2;
-  --color-secondary: #4C239B;
-  --color-accent: #38C7D2;
-  --color-surface: #FFFFFF;
-  --color-text-main: #141624;
-  --color-bg-light: #F0F6F9;
-  
-  --font-sans: var(--font-geist-sans), "Inter", sans-serif;
-  --font-mono: var(--font-geist-mono), monospace;
+  --color-primary: #4F46E5;
+  --color-pastel-blue: #E0E7FF;
+  --color-pastel-purple: #F3E8FF;
+  --color-pastel-mint: #D1FAE5;
+  --color-pastel-peach: #FFEDD5;
 }
 
-:root {
-  background-color: #F0F6F9;
-  color: #141624;
-}
-
-/* Force light mode variables across the board */
-body {
-  background-color: #F0F6F9 !important;
-  color: #141624 !important;
-  font-family: var(--font-sans);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-@media (pointer: fine) {
-  body {
-    cursor: none;
-  }
-  
-  a, button, input, select, textarea, [role="button"] {
-    cursor: none !important;
-  }
-}
-
-html {
-  scroll-behavior: smooth;
-  background-color: #F0F6F9 !important;
-}
-
-::selection {
-  background-color: #4C239B;
-  color: #FFFFFF;
-}
-
-/* Removing any tailwind dark mode behavior by explicitly overriding dark media queries */
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    color-scheme: light;
+    --background: #FFFFFF;
+    --foreground: #1E293B;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
   }
 }
-/* End of file */
+
+@layer utilities {
+  .shadow-pastel-soft {
+    box-shadow: 0 10px 40px -10px rgba(79, 70, 229, 0.08), 
+                0 4px 12px rgba(0, 0, 0, 0.03);
+  }
+
+  .shadow-pastel-float {
+    box-shadow: 0 20px 50px -15px rgba(79, 70, 229, 0.12),
+                0 10px 20px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  .bg-gradient-pastel {
+    background: linear-gradient(135deg, var(--pastel-blue) 0%, var(--pastel-purple) 100%);
+  }
+
+  /* Soft Glass for Corporate Feel */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(241, 245, 249, 1); /* Slate 100 border */
+  }
+
+  /* Gradient Text for Headlines */
+  .text-gradient-corporate {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(135deg, #312E81 0%, #4F46E5 100%);
+  }
+
+}

@@ -1,182 +1,144 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Code, Lightning, ShieldCheck, Target, CheckCircle } from "@phosphor-icons/react/dist/ssr";
+import { CheckCircle, Users, Desktop, Cpu, ChartLineUp, ShieldCheck, UserCircle, LinkedinLogo } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col w-full bg-white text-text-main selection:bg-secondary selection:text-white font-sans overflow-hidden">
+    <div className="flex flex-col w-full bg-white text-slate-800 overflow-hidden font-sans">
       
-      {/* 1. Hero Section */}
-      <section className="relative w-full min-h-[70vh] flex flex-col justify-center px-6 pb-24 pt-40 bg-[#F0F6F9]">
-        <div className="max-w-[1400px] mx-auto w-full flex flex-col gap-8">
+      {/* 1. CORPORATE HERO */}
+      <section className="relative w-full pt-40 pb-24 px-6 flex flex-col items-center justify-center text-center border-b border-slate-100 overflow-hidden">
+        <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-pastel-blue blur-[100px] rounded-full opacity-40 pointer-events-none" />
+        <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-pastel-mint blur-[100px] rounded-full opacity-30 pointer-events-none" />
+        
+        <div className="max-w-[1000px] mx-auto w-full flex flex-col gap-6 relative z-10">
           <motion.div 
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-            className="flex items-center gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="px-4 py-1.5 bg-white rounded-full border border-slate-100 inline-flex mx-auto items-center gap-2 mb-4 shadow-sm"
           >
-            <div className="w-12 h-px bg-primary" />
-            <span className="text-sm font-semibold uppercase tracking-widest text-text-main/60">About LogicWare Tech</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-slate-500">Who We Are</span>
           </motion.div>
-          
+
           <motion.h1 
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-7xl lg:text-[6rem] font-semibold tracking-tight leading-[1.1]"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 leading-[1.1]"
           >
-            Architecting the <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Future of Work.</span>
+            Architecting the <span className="text-gradient-corporate">Future of Work.</span>
           </motion.h1>
           
           <motion.p 
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl md:text-2xl text-text-main/70 font-medium leading-relaxed max-w-2xl mt-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto mt-4"
           >
             We are a premier digital transformation agency. We engineer robust, autonomous systems that allow enterprises to scale without friction.
           </motion.p>
         </div>
       </section>
 
-      {/* 1.5 Company Metrics */}
-      <section className="w-full py-16 bg-text-main text-white border-y border-primary/20">
-        <div className="max-w-[1400px] mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
-           <div className="flex flex-col gap-2">
-             <span className="text-5xl font-bold text-primary">15+</span>
-             <span className="text-sm uppercase tracking-widest text-white/60">Years Combined Exp.</span>
-           </div>
-           <div className="flex flex-col gap-2">
-             <span className="text-5xl font-bold text-primary">50+</span>
-             <span className="text-sm uppercase tracking-widest text-white/60">Enterprise Systems</span>
-           </div>
-           <div className="flex flex-col gap-2">
-             <span className="text-5xl font-bold text-primary">99%</span>
-             <span className="text-sm uppercase tracking-widest text-white/60">Client Retention</span>
-           </div>
-           <div className="flex flex-col gap-2">
-             <span className="text-5xl font-bold text-primary">24/7</span>
-             <span className="text-sm uppercase tracking-widest text-white/60">Autonomous Uptime</span>
-           </div>
-        </div>
-      </section>
-
-      {/* 2. Core Values (Replacing DNA Bento) */}
-      <section className="w-full py-24 lg:py-32 bg-white">
-        <div className="max-w-[1400px] mx-auto px-6 flex flex-col gap-16">
-          <div className="flex flex-col gap-4 max-w-2xl">
-            <span className="text-primary font-semibold tracking-widest uppercase text-sm">Our Philosophy</span>
-            <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-text-main leading-tight">
-              The core principles driving our engineering.
-            </h2>
+      {/* 2. CORE PRINCIPLES */}
+      <section className="w-full py-24 bg-slate-50 relative border-b border-slate-100">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Our Ethos</h2>
+            <h3 className="text-4xl font-bold text-slate-900 tracking-tight">The core principles driving our engineering.</h3>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { icon: <Code size={48} className="text-primary" weight="duotone" />, title: "Engineering Excellence", desc: "We write clean, modular, and deeply integrated code. Our architectures scale horizontally and never compromise on performance." },
-              { icon: <Target size={48} className="text-primary" weight="duotone" />, title: "Agnostic Integration", desc: "We don't force you into proprietary boxes. We wire together your existing tools—Odoo, HubSpot, OpenAI—into one unified brain." },
-              { icon: <ShieldCheck size={48} className="text-primary" weight="duotone" />, title: "Absolute Transparency", desc: "No vanity metrics. No bloated timelines. We operate with strict SLAs and deliver exact, measurable business value." }
-            ].map((value, i) => (
-              <div key={i} className="flex flex-col gap-6 p-10 rounded-3xl bg-[#F0F6F9] border border-primary/5 hover:border-primary/20 hover:shadow-xl hover:bg-white transition-all duration-300">
-                <div className="w-16 h-16 rounded-2xl bg-white border border-primary/10 flex items-center justify-center shadow-sm">
-                  {value.icon}
-                </div>
-                <h3 className="text-2xl font-semibold text-text-main">{value.title}</h3>
-                <p className="text-text-main/60 text-lg leading-relaxed">{value.desc}</p>
+            <div className="bg-white rounded-3xl p-10 border border-slate-100 shadow-sm flex flex-col items-start gap-4">
+              <div className="w-14 h-14 rounded-2xl bg-pastel-blue text-[#4F46E5] flex items-center justify-center">
+                <Cpu weight="fill" size={28} />
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 2.5 Tech Stack / Agnostic Architecture */}
-      <section className="w-full py-24 lg:py-32 bg-text-main text-white relative overflow-hidden">
-        {/* Background Accents */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-secondary/5 blur-[120px] rounded-full pointer-events-none" />
-
-        <div className="max-w-[1400px] mx-auto px-6 relative z-10 flex flex-col gap-16">
-          <div className="flex flex-col md:flex-row justify-between items-end gap-8">
-            <div className="flex flex-col gap-4 max-w-2xl">
-              <span className="text-primary font-semibold tracking-widest uppercase text-sm">Agnostic Architecture</span>
-              <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-white leading-tight">
-                Built on modern technology.
-              </h2>
-            </div>
-            <p className="text-white/60 max-w-sm text-lg font-medium">
-              We also integrate with many other platforms and tools based on existing infra or according to client needs.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              "React & Next.js",
-              "Node.js",
-              "Odoo ERP",
-              "OpenAI",
-              "n8n / Make",
-              "Tailwind CSS",
-              "PostgreSQL",
-              "AWS / Vercel"
-            ].map((tech, i) => (
-              <div key={i} className="flex items-center justify-center p-8 text-center rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-primary/50 transition-all duration-300">
-                <span className="text-xl font-medium text-white/90">{tech}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 3. Leadership */}
-      <section className="w-full py-24 lg:py-32 bg-[#F0F6F9]">
-        <div className="max-w-[1400px] mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
-            <div className="flex flex-col gap-4">
-              <span className="text-primary font-semibold tracking-widest uppercase text-sm">Leadership</span>
-              <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-text-main">
-                The Architecture Board
-              </h2>
-            </div>
-            <p className="text-text-main/60 max-w-sm text-lg font-medium">Decades of corporate strategy paired with elite full-stack engineering.</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="rounded-3xl bg-white p-10 md:p-14 border border-primary/10 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between min-h-[350px]">
-              <div>
-                <span className="text-xs font-semibold text-text-main/50 uppercase tracking-widest mb-4 block">CEO & Director</span>
-                <h3 className="text-4xl font-semibold text-text-main tracking-tight mb-6">Swastik Davey</h3>
-                <p className="text-lg text-text-main/60 leading-relaxed">20+ years of corporate leadership and enterprise scaling experience, architecting business growth from the top down.</p>
-              </div>
+              <h4 className="text-2xl font-bold text-slate-900">Engineering Excellence</h4>
+              <p className="text-slate-600 leading-relaxed">We write clean, modular, and deeply integrated code. Our architectures scale horizontally and never compromise on performance.</p>
             </div>
             
-            <div className="rounded-3xl bg-white p-10 md:p-14 border border-primary/10 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between min-h-[350px]">
-              <div>
-                <span className="text-xs font-semibold text-text-main/50 uppercase tracking-widest mb-4 block">CTO & Architect</span>
-                <h3 className="text-4xl font-semibold text-text-main tracking-tight mb-6">Rudresh Vyas</h3>
-                <p className="text-lg text-text-main/60 leading-relaxed">Professional MERN stack developer and automation engineer, building the autonomous systems that power modern enterprises.</p>
+            <div className="bg-white rounded-3xl p-10 border border-slate-100 shadow-sm flex flex-col items-start gap-4">
+              <div className="w-14 h-14 rounded-2xl bg-pastel-purple text-[#9333EA] flex items-center justify-center">
+                <Desktop weight="fill" size={28} />
               </div>
+              <h4 className="text-2xl font-bold text-slate-900">Agnostic Integration</h4>
+              <p className="text-slate-600 leading-relaxed">We don't force you into proprietary boxes. We wire together your existing tools—Odoo, HubSpot, OpenAI—into one unified brain.</p>
+            </div>
+
+            <div className="bg-white rounded-3xl p-10 border border-slate-100 shadow-sm flex flex-col items-start gap-4">
+              <div className="w-14 h-14 rounded-2xl bg-pastel-mint text-[#059669] flex items-center justify-center">
+                <ChartLineUp weight="fill" size={28} />
+              </div>
+              <h4 className="text-2xl font-bold text-slate-900">Absolute Transparency</h4>
+              <p className="text-slate-600 leading-relaxed">No vanity metrics. No bloated timelines. We operate with strict SLAs and deliver exact, measurable business value.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 4. Final CTA */}
-      <section className="w-full py-32 bg-white flex justify-center">
-        <div className="w-full max-w-5xl mx-6 bg-text-main rounded-[3rem] p-12 md:p-20 flex flex-col items-center text-center shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/10 blur-[120px] rounded-full pointer-events-none" />
-          
-          <h2 className="text-4xl md:text-6xl font-semibold tracking-tight text-white mb-6 relative z-10">
-            Ready to upgrade your infrastructure?
-          </h2>
-          <p className="text-xl text-white/60 max-w-2xl mb-12 relative z-10">
-            Our architects are ready to audit your stack and provide a comprehensive automation roadmap.
-          </p>
-          
-          <Link href="/contact" className="relative z-10 px-10 py-5 bg-white text-text-main rounded-xl font-bold text-lg hover:bg-primary hover:text-white transition-all duration-300 shadow-xl flex items-center gap-3 group">
-            <span>Book an Audit</span>
-            <ArrowRight weight="bold" className="group-hover:translate-x-1 transition-transform" />
-          </Link>
+      {/* 3. THE ARCHITECTURE BOARD */}
+      <section className="w-full py-24 bg-white relative">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Leadership</h2>
+            <h3 className="text-4xl font-bold text-slate-900 tracking-tight mb-4">The Architecture Board</h3>
+            <p className="text-lg text-slate-600">Decades of corporate strategy paired with elite full-stack engineering.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-[900px] mx-auto">
+            {/* Founder 1 */}
+            <div className="flex flex-col sm:flex-row gap-6 bg-slate-50 p-8 rounded-[2rem] border border-slate-100 items-center sm:items-start text-center sm:text-left">
+              <div className="w-32 h-32 rounded-full bg-slate-200 overflow-hidden relative shrink-0">
+                {/* Fallback avatar if no image */}
+                <div className="absolute inset-0 flex items-center justify-center text-slate-400">
+                  <UserCircle weight="fill" size={128} className="absolute -bottom-4" />
+                </div>
+              </div>
+              <div className="flex flex-col gap-2">
+                <h4 className="text-2xl font-bold text-slate-900">Swastik Davey</h4>
+                <p className="text-sm font-bold uppercase tracking-wider text-primary">Strategy & Operations</p>
+                <p className="text-slate-600 mt-2">20+ years of corporate leadership and enterprise scaling experience, architecting business growth from the top down.</p>
+                <Link href="#" className="mt-2 text-slate-400 hover:text-[#0A66C2] transition-colors self-center sm:self-start">
+                  <LinkedinLogo weight="fill" size={24} />
+                </Link>
+              </div>
+            </div>
+
+            {/* Founder 2 */}
+            <div className="flex flex-col sm:flex-row gap-6 bg-slate-50 p-8 rounded-[2rem] border border-slate-100 items-center sm:items-start text-center sm:text-left">
+              <div className="w-32 h-32 rounded-full bg-slate-200 overflow-hidden relative shrink-0">
+                {/* Fallback avatar if no image */}
+                <div className="absolute inset-0 flex items-center justify-center text-slate-400">
+                  <UserCircle weight="fill" size={128} className="absolute -bottom-4" />
+                </div>
+              </div>
+              <div className="flex flex-col gap-2">
+                <h4 className="text-2xl font-bold text-slate-900">Rudresh Vyas</h4>
+                <p className="text-sm font-bold uppercase tracking-wider text-primary">Chief Automation Engineer</p>
+                <p className="text-slate-600 mt-2">Professional MERN stack developer and automation engineer, building the autonomous systems that power modern enterprises.</p>
+                <Link href="#" className="mt-2 text-slate-400 hover:text-[#0A66C2] transition-colors self-center sm:self-start">
+                  <LinkedinLogo weight="fill" size={24} />
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       
+      {/* CTA */}
+      <section className="w-full py-24 bg-slate-900 text-white flex flex-col items-center text-center px-6 relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary blur-[150px] rounded-full opacity-30 pointer-events-none" />
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight relative z-10">Ready to upgrade your infrastructure?</h2>
+        <p className="text-xl text-slate-300 max-w-2xl mb-10 relative z-10">Our architects are ready to audit your stack and provide a comprehensive automation roadmap.</p>
+        <Link href="/contact" className="bg-white hover:bg-slate-100 text-slate-900 px-10 py-5 rounded-xl font-semibold text-lg transition-transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2 relative z-10">
+          Book an Audit
+        </Link>
+      </section>
+
     </div>
   );
 }

@@ -45,8 +45,8 @@ export default function Navbar() {
       >
         <div
           className={cn(
-            "flex w-max items-center justify-between gap-12 rounded-full bg-white/70 px-6 py-1 md:py-2 backdrop-blur-xl border border-white/50 transition-all duration-500",
-            scrolled ? "shadow-lg shadow-primary/5 bg-white/90" : ""
+            "flex w-max items-center justify-between gap-12 rounded-full px-8 py-3 transition-all duration-500",
+            scrolled ? "bg-white/90 backdrop-blur-md shadow-sm border border-slate-100" : "bg-transparent"
           )}
         >
           {/* Logo */}
@@ -64,7 +64,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-muted hover:text-foreground transition-colors"
+                className="text-sm font-semibold tracking-wide text-slate-600 hover:text-primary transition-colors"
               >
                 {link.label}
               </Link>
@@ -73,7 +73,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden relative z-50 flex h-10 w-10 items-center justify-center rounded-full bg-black/5 text-foreground transition-transform active:scale-95"
+            className="md:hidden relative z-50 flex h-12 w-12 items-center justify-center rounded-full glass-button text-primary transition-transform active:scale-95 shadow-skeuo-soft"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -108,11 +108,11 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
-            className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-background/90 backdrop-blur-3xl"
+            initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
+            animate={{ opacity: 1, backdropFilter: "blur(20px)" }}
+            exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-white/90 border-t border-slate-100"
           >
             <nav className="flex flex-col items-center gap-8">
               {NAV_LINKS.map((link, i) => (
@@ -129,7 +129,7 @@ export default function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className="text-4xl font-medium tracking-tight text-foreground"
+                    className="text-5xl font-serif tracking-tight text-[#111111]"
                     onClick={() => setIsOpen(false)}
                   >
                     {link.label}

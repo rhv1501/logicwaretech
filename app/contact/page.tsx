@@ -1,147 +1,136 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, EnvelopeSimple, PhoneCall, CheckCircle } from "@phosphor-icons/react/dist/ssr";
-import { useState } from "react";
-import { submitContactForm } from "@/app/actions/contact";
+import { Envelope, Phone, MapPin, CheckCircle, Clock, ShieldCheck, Users } from "@phosphor-icons/react/dist/ssr";
 
 export default function ContactPage() {
-  const [formState, setFormState] = useState("idle");
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setFormState("submitting");
-    const formData = new FormData(e.currentTarget);
-    const result = await submitContactForm(formData);
-    if (result.success) {
-      setFormState("success");
-    } else {
-      setFormState("idle");
-      alert(result.error || "Something went wrong.");
-    }
-  };
-
   return (
-    <div className="flex flex-col w-full bg-white text-text-main selection:bg-secondary selection:text-white font-sans overflow-hidden">
+    <div className="flex flex-col w-full bg-slate-50 text-slate-800 font-sans min-h-screen">
       
-      <section className="w-full min-h-[100dvh] pt-32 pb-24 flex items-center bg-[#F0F6F9]">
-        <div className="max-w-[1400px] mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-          
-          {/* Left Column: Contact Details */}
-          <div className="flex flex-col justify-center gap-10 pt-12 lg:pt-0">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-              className="flex items-center gap-4"
-            >
-              <div className="w-12 h-px bg-primary" />
-              <span className="text-sm font-semibold uppercase tracking-widest text-text-main/60">Contact Us</span>
-            </motion.div>
-
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1.1]"
-            >
-              Book an <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Architecture Review.</span>
-            </motion.h1>
-
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-text-main/70 font-medium leading-relaxed max-w-lg"
-            >
-              Leave your details below. Our architecture board will review your operational stack and design a custom automation roadmap.
-            </motion.p>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-col gap-8 mt-4 border-t border-primary/10 pt-10"
-            >
-               <div className="flex items-center gap-6 group">
-                 <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center border border-primary/10 group-hover:border-primary/40 shadow-sm transition-colors">
-                   <EnvelopeSimple size={24} className="text-primary" weight="duotone" />
-                 </div>
-                 <div className="flex flex-col">
-                   <span className="text-xs font-semibold text-text-main/50 uppercase tracking-widest mb-1">Direct Line</span>
-                   <a href="mailto:info@logicwaretech.com" className="text-xl font-semibold hover:text-primary transition-colors">info@logicwaretech.com</a>
-                 </div>
-               </div>
-               <div className="flex items-center gap-6 group">
-                 <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center border border-primary/10 group-hover:border-primary/40 shadow-sm transition-colors">
-                   <PhoneCall size={24} className="text-primary" weight="duotone" />
-                 </div>
-                 <div className="flex flex-col">
-                   <span className="text-xs font-semibold text-text-main/50 uppercase tracking-widest mb-1">Phone Support</span>
-                   <a href="tel:+919940644543" className="text-xl font-semibold hover:text-primary transition-colors">+91 99406 44543</a>
-                 </div>
-               </div>
-            </motion.div>
-          </div>
-
-          {/* Right Column: Form */}
+      {/* 1. HERO */}
+      <section className="relative w-full pt-40 pb-24 px-6 flex flex-col items-center justify-center text-center overflow-hidden">
+        <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-pastel-blue blur-[100px] rounded-full opacity-40 pointer-events-none" />
+        
+        <div className="max-w-[1000px] mx-auto w-full flex flex-col gap-6 relative z-10">
           <motion.div 
-             initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}
-             className="relative w-full z-10 flex flex-col justify-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="px-4 py-1.5 bg-white rounded-full border border-slate-100 inline-flex mx-auto items-center gap-2 mb-4 shadow-sm"
           >
-            <div className="w-full bg-white p-8 md:p-12 lg:p-16 rounded-[2rem] border border-primary/10 shadow-2xl">
-              {formState === "success" ? (
-                <div className="flex flex-col items-center justify-center text-center gap-6 py-20">
-                  <div className="w-24 h-24 rounded-full bg-[#F0F6F9] flex items-center justify-center text-primary mb-4">
-                    <CheckCircle size={48} weight="fill" />
-                  </div>
-                  <h3 className="text-4xl font-bold tracking-tight text-text-main">Request Received</h3>
-                  <p className="text-lg text-text-main/60 max-w-sm">Thank you. Our architecture team has received your information and will be in touch shortly.</p>
-                </div>
-              ) : (
-                <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="flex flex-col gap-2">
-                      <label className="text-xs font-semibold uppercase tracking-widest text-text-main/60 ml-2">First Name</label>
-                      <input name="firstName" required type="text" className="w-full bg-[#F0F6F9] rounded-xl px-5 py-4 text-base border border-transparent focus:border-primary/30 focus:outline-none transition-colors focus:bg-white" placeholder="John" />
-                    </div>
-                    <div className="flex flex-col gap-2">
-                      <label className="text-xs font-semibold uppercase tracking-widest text-text-main/60 ml-2">Last Name</label>
-                      <input name="lastName" required type="text" className="w-full bg-[#F0F6F9] rounded-xl px-5 py-4 text-base border border-transparent focus:border-primary/30 focus:outline-none transition-colors focus:bg-white" placeholder="Doe" />
-                    </div>
-                  </div>
-                  
-                  <div className="flex flex-col gap-2">
-                    <label className="text-xs font-semibold uppercase tracking-widest text-text-main/60 ml-2">Work Email</label>
-                    <input name="email" required type="email" className="w-full bg-[#F0F6F9] rounded-xl px-5 py-4 text-base border border-transparent focus:border-primary/30 focus:outline-none transition-colors focus:bg-white" placeholder="john@enterprise.com" />
-                  </div>
-                  
-                  <div className="flex flex-col gap-2">
-                    <label className="text-xs font-semibold uppercase tracking-widest text-text-main/60 ml-2">Target Objective</label>
-                    <div className="relative">
-                      <select name="objective" className="w-full bg-[#F0F6F9] rounded-xl px-5 py-4 text-base border border-transparent focus:border-primary/30 focus:outline-none transition-colors focus:bg-white appearance-none cursor-pointer">
-                        <option>AI Agentic Systems</option>
-                        <option>ERP / CRM Automations</option>
-                        <option>Web / Mobile Application</option>
-                        <option>Full Architecture Audit</option>
-                      </select>
-                      <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-text-main/40">
-                        <ArrowRight size={16} className="rotate-90" />
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex flex-col gap-2">
-                    <label className="text-xs font-semibold uppercase tracking-widest text-text-main/60 ml-2">Project Details (Optional)</label>
-                    <textarea name="parameters" rows={4} className="w-full bg-[#F0F6F9] rounded-xl px-5 py-4 text-base border border-transparent focus:border-primary/30 focus:outline-none transition-colors focus:bg-white resize-none" placeholder="Briefly describe your current stack and bottlenecks..." />
-                  </div>
-                  
-                  <button type="submit" disabled={formState === "submitting"} className="w-full mt-4 px-6 py-5 bg-text-main text-white rounded-xl font-bold text-lg uppercase tracking-widest hover:bg-primary transition-colors duration-300 shadow-xl overflow-hidden relative group disabled:opacity-70 disabled:cursor-not-allowed">
-                    <span className="relative z-10 flex items-center justify-center gap-3">
-                      {formState === "submitting" ? "Submitting..." : "Send Request"}
-                      {formState !== "submitting" && <ArrowRight weight="bold" className="group-hover:translate-x-1 transition-transform" />}
-                    </span>
-                  </button>
-                </form>
-              )}
-            </div>
+            <span className="text-xs font-bold uppercase tracking-widest text-slate-500">Get In Touch</span>
           </motion.div>
+
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 leading-[1.1]"
+          >
+            Let's build your <br/>
+            <span className="text-gradient-corporate">competitive advantage.</span>
+          </motion.h1>
+          
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto mt-4"
+          >
+            Speak with our architecture team to design a custom automation roadmap for your organization.
+          </motion.p>
         </div>
       </section>
 
+      {/* 2. SPLIT LAYOUT: FORM & TRUST FACTORS */}
+      <section className="w-full pb-32 px-6 relative z-10">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+          
+          {/* Left: The Form */}
+          <div className="bg-white rounded-[2rem] p-8 md:p-12 shadow-sm border border-slate-100 flex flex-col gap-8 relative overflow-hidden">
+             <div className="absolute top-0 right-0 w-32 h-32 bg-pastel-purple blur-[60px] rounded-full opacity-50 pointer-events-none" />
+             <h3 className="text-3xl font-bold text-slate-900 relative z-10">Request an Architecture Review</h3>
+             <form className="flex flex-col gap-6 relative z-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="flex flex-col gap-2">
+                    <label className="text-sm font-bold text-slate-700">First Name</label>
+                    <input type="text" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-shadow" placeholder="John" />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <label className="text-sm font-bold text-slate-700">Last Name</label>
+                    <input type="text" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-shadow" placeholder="Doe" />
+                  </div>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <label className="text-sm font-bold text-slate-700">Corporate Email</label>
+                  <input type="email" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-shadow" placeholder="john@enterprise.com" />
+                </div>
+                <div className="flex flex-col gap-2">
+                  <label className="text-sm font-bold text-slate-700">Operational Bottleneck</label>
+                  <textarea rows={4} className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-shadow resize-none" placeholder="Describe the current inefficiencies you are facing..."></textarea>
+                </div>
+                <button type="button" className="w-full bg-primary hover:bg-primary/90 text-white rounded-xl py-4 font-bold text-lg transition-transform hover:scale-[1.02] shadow-pastel-soft mt-4">
+                  Submit Request
+                </button>
+             </form>
+          </div>
+
+          {/* Right: Trust Factors */}
+          <div className="flex flex-col justify-center gap-10">
+             
+             <div>
+               <h4 className="text-sm font-bold uppercase tracking-widest text-primary mb-6">Service Level Agreements</h4>
+               <div className="flex flex-col gap-4">
+                 <div className="flex items-center gap-4">
+                   <div className="w-12 h-12 rounded-full bg-pastel-mint text-[#059669] flex items-center justify-center shrink-0">
+                     <Clock weight="fill" size={24} />
+                   </div>
+                   <div>
+                     <p className="font-bold text-slate-900 text-lg">Rapid Response</p>
+                     <p className="text-slate-500 text-sm">All inquiries are reviewed by a Senior Architect within 2 hours.</p>
+                   </div>
+                 </div>
+                 <div className="flex items-center gap-4">
+                   <div className="w-12 h-12 rounded-full bg-pastel-blue text-[#4F46E5] flex items-center justify-center shrink-0">
+                     <ShieldCheck weight="fill" size={24} />
+                   </div>
+                   <div>
+                     <p className="font-bold text-slate-900 text-lg">Absolute Confidentiality</p>
+                     <p className="text-slate-500 text-sm">We operate under strict NDA for all architecture audits.</p>
+                   </div>
+                 </div>
+               </div>
+             </div>
+
+             <div className="w-full h-[1px] bg-slate-200" />
+
+             <div className="flex flex-col gap-2 mt-4">
+               <div className="flex items-center gap-2 text-slate-900 font-bold">
+                 <Envelope weight="fill" className="text-primary" size={20} /> Email Us
+               </div>
+               <a href="mailto:info@logicwaretech.com" className="text-slate-500 hover:text-primary transition-colors font-medium">info@logicwaretech.com</a>
+             </div>
+
+             <div>
+               <h4 className="text-sm font-bold uppercase tracking-widest text-primary mb-6">Engagement Models</h4>
+               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                 <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col gap-2">
+                   <p className="font-bold text-slate-900">Fixed Price</p>
+                   <p className="text-sm text-slate-500">Best for well-defined scopes with strict budget control.</p>
+                 </div>
+                 <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col gap-2">
+                   <p className="font-bold text-slate-900">Dedicated Team</p>
+                   <p className="text-sm text-slate-500">Scale your capacity instantly with managed engineering pods.</p>
+                 </div>
+               </div>
+             </div>
+
+
+
+          </div>
+        </div>
+      </section>
+      
     </div>
   );
 }
