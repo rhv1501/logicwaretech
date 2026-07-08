@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import { List, X } from "@phosphor-icons/react";
+import { List, X, CaretDown } from "@phosphor-icons/react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -11,6 +11,16 @@ const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
   { href: "/services", label: "Services" },
+  { 
+    href: "/compliance", 
+    label: "Compliance",
+    subLinks: [
+      { href: "/compliance#iso-27001", label: "ISO 27001 Readiness" },
+      { href: "/compliance#dpdpa-compliance", label: "DPDPA Compliance" },
+      { href: "/compliance#it-risk-management", label: "IT Risk Management" },
+      { href: "/compliance#controls-assurance", label: "Controls Assurance" },
+    ]
+  },
   { href: "/contact", label: "Contact Us" },
 ];
 
@@ -55,19 +65,38 @@ export default function Navbar() {
             className="flex items-center z-50 relative hover:opacity-80 transition-opacity"
             onClick={() => setIsOpen(false)}
           >
-            <Image src="/logo.png" alt="LogicWare Tech" width={120} height={120} className="w-12 md:w-16 h-auto object-contain" priority />
+            <Image src="/logo.png" alt="LogicWare Tech" width={150} height={150} className="w-16 md:w-24 h-auto object-contain" priority />
           </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-sm font-semibold tracking-wide text-slate-600 hover:text-primary transition-colors"
-              >
-                {link.label}
-              </Link>
+              link.subLinks ? (
+                <div key={link.href} className="relative group">
+                  <Link
+                    href={link.href}
+                    className="flex items-center gap-1 text-sm font-semibold tracking-wide text-slate-600 hover:text-primary transition-colors py-2"
+                  >
+                    {link.label}
+                    <CaretDown size={14} weight="bold" />
+                  </Link>
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-white rounded-2xl shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all flex flex-col overflow-hidden py-2 z-50">
+                    {link.subLinks.map(sub => (
+                      <Link key={sub.href} href={sub.href} className="px-5 py-3 hover:bg-slate-50 text-sm font-medium text-slate-700 transition-colors">
+                        {sub.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm font-semibold tracking-wide text-slate-600 hover:text-primary transition-colors py-2"
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
           </nav>
 

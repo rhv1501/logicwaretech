@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Robot, Database, Desktop, CheckCircle, Users, ChartLineUp, XCircle, ShoppingCart, Factory, Heartbeat, Bank, Storefront, Timer, DeviceMobile, Code, CaretDown, TrendUp, Clock, Infinity, ShieldCheck, LockKey, GlobeHemisphereWest, Key, FileText, MagnifyingGlass, RocketLaunch, Plug } from "@phosphor-icons/react/dist/ssr";
+import { ArrowRight, Robot, Database, Desktop, CheckCircle, Users, ChartLineUp, ChartBar, XCircle, ShoppingCart, Factory, Heartbeat, Bank, Storefront, Timer, DeviceMobile, Code, CaretDown, TrendUp, Clock, Infinity, ShieldCheck, LockKey, GlobeHemisphereWest, Key, FileText, MagnifyingGlass, RocketLaunch, Plug } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
@@ -12,35 +12,40 @@ const ARCHITECTURES = [
     title: "AI Agentic Systems",
     desc: "Deploy autonomous AI workers designed to reason, decide, and execute complex tasks 24/7 without human intervention.",
     icon: <Robot weight="fill" size={28} />,
-    color: "bg-pastel-blue text-[#4F46E5]"
+    color: "bg-pastel-blue text-[#4F46E5]",
+    image: "/images/services/ai.png"
   },
   {
     id: "erp",
     title: "ERP & CRM Workflows",
     desc: "Automated pipelines moving leads from capture to close with zero friction. Scalable databases and operational flows.",
     icon: <Database weight="fill" size={28} />,
-    color: "bg-pastel-purple text-[#9333EA]"
+    color: "bg-pastel-purple text-[#9333EA]",
+    image: "/images/services/erp.png"
   },
   {
     id: "web",
     title: "Web Applications",
     desc: "High-performance, scalable web applications built for enterprise ecosystems with consumer-grade interfaces.",
     icon: <Desktop weight="fill" size={28} />,
-    color: "bg-pastel-mint text-[#059669]"
+    color: "bg-pastel-mint text-[#059669]",
+    image: "/images/services/web.png"
   },
   {
     id: "mobile",
     title: "Mobile Applications",
     desc: "Native and cross-platform mobile applications engineered for seamless user experiences and massive data payloads.",
     icon: <DeviceMobile weight="fill" size={28} />,
-    color: "bg-pastel-peach text-[#EA580C]"
+    color: "bg-pastel-peach text-[#EA580C]",
+    image: "/images/services/mobile.png"
   },
   {
     id: "custom",
     title: "Custom Software",
     desc: "Bespoke operational software tailored exactly to your unique organizational requirements. No off-the-shelf compromises.",
     icon: <Code weight="fill" size={28} />,
-    color: "bg-slate-200 text-slate-700"
+    color: "bg-slate-200 text-slate-700",
+    image: "/images/services/custom.png"
   }
 ];
 
@@ -133,7 +138,7 @@ export default function Home() {
             <div className="absolute inset-0 glass-card rounded-[2rem] p-4 shadow-pastel-float border border-white rotate-2 transform-gpu transition-transform hover:rotate-0 duration-500">
               <div className="w-full h-full rounded-[1.5rem] overflow-hidden relative bg-slate-50">
                 <Image 
-                  src="/images/hero_split_3d.png" 
+                  src="/hero.jpeg" 
                   alt="Enterprise AI and ERP Solutions Dashboard" 
                   fill 
                   className="object-cover object-center opacity-90"
@@ -236,7 +241,12 @@ export default function Home() {
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
                       <div className="px-6 md:px-8 pb-8 pt-2 md:ml-[80px]">
-                        <p className="text-slate-600 text-lg leading-relaxed">{arch.desc}</p>
+                        <div className="flex flex-col md:flex-row gap-6 items-start">
+                          <p className="text-slate-600 text-lg leading-relaxed flex-1">{arch.desc}</p>
+                          <div className="w-full md:w-1/3 aspect-video relative rounded-xl overflow-hidden shrink-0 border border-slate-100 shadow-sm mt-4 md:mt-0">
+                             <Image src={arch.image} alt={arch.title} fill className="object-cover" />
+                          </div>
+                        </div>
                       </div>
                     </motion.div>
                   )}
@@ -393,43 +403,43 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-6 relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 border-b border-white/10 pb-8">
             <div className="max-w-2xl">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-pastel-blue mb-4">Enterprise Grade</h2>
+              <h2 className="text-sm font-bold uppercase tracking-widest text-pastel-blue mb-4">Audit-Ready Frameworks</h2>
               <h3 className="text-4xl font-bold tracking-tight mb-4">Security & Compliance.</h3>
-              <p className="text-lg text-slate-300">We engineer architectures that strictly adhere to international data security and privacy regulations.</p>
+              <p className="text-lg text-slate-300">We systematically design, implement, and audit your Information Security Management System (ISMS) from the ground up, guaranteeing enterprise-level trust.</p>
             </div>
-            <div className="bg-white/10 p-4 rounded-xl border border-white/20 flex items-center gap-3 shrink-0">
-              <div className="w-3 h-3 rounded-full bg-pastel-mint animate-pulse" />
-              <span className="font-bold text-sm tracking-wider uppercase text-white">Infrastructure Secured</span>
-            </div>
+            <Link href="/compliance" className="bg-white/10 hover:bg-white/20 transition-colors p-4 rounded-xl border border-white/20 flex items-center gap-3 shrink-0">
+              <span className="font-bold text-sm tracking-wider uppercase text-white">View Full Compliance Framework</span>
+              <ArrowRight weight="bold" />
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-             <div className="flex items-start gap-4">
+             <div className="flex items-start gap-4 bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
                <ShieldCheck weight="fill" className="text-pastel-blue shrink-0" size={32} />
                <div>
-                 <h4 className="text-xl font-bold mb-2">SOC2-Ready Architecture</h4>
-                 <p className="text-slate-400 leading-relaxed">Pipelines engineered with strict access controls, audit logging, and continuous monitoring to meet SOC2 standards.</p>
+                 <h4 className="text-xl font-bold mb-2 text-white">ISO 27001 Readiness</h4>
+                 <p className="text-slate-400 leading-relaxed text-sm">End-to-end ISO/IEC 27001 implementation, gap assessment, and pre-certification auditing led by a certified Lead Auditor.</p>
                </div>
              </div>
-             <div className="flex items-start gap-4">
+             <div className="flex items-start gap-4 bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
                <LockKey weight="fill" className="text-pastel-purple shrink-0" size={32} />
                <div>
-                 <h4 className="text-xl font-bold mb-2">End-to-End Encryption</h4>
-                 <p className="text-slate-400 leading-relaxed">All data in transit and at rest is secured using AES-256 encryption, ensuring absolute data integrity.</p>
+                 <h4 className="text-xl font-bold mb-2 text-white">DPDPA & Data Privacy</h4>
+                 <p className="text-slate-400 leading-relaxed text-sm">Map data flows, build robust consent architectures, and establish the mandatory technical measures to safeguard Principal rights.</p>
                </div>
              </div>
-             <div className="flex items-start gap-4">
-               <GlobeHemisphereWest weight="fill" className="text-pastel-mint shrink-0" size={32} />
+             <div className="flex items-start gap-4 bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+               <ChartBar weight="fill" className="text-pastel-mint shrink-0" size={32} />
                <div>
-                 <h4 className="text-xl font-bold mb-2">Data Sovereignty</h4>
-                 <p className="text-slate-400 leading-relaxed">We respect local compliance laws (GDPR, CCPA) and configure server regions based on your legal requirements.</p>
+                 <h4 className="text-xl font-bold mb-2 text-white">IT Risk Management</h4>
+                 <p className="text-slate-400 leading-relaxed text-sm">Independent risk profiling and quantitative analysis translating technical vulnerabilities into structured business risk registers.</p>
                </div>
              </div>
-             <div className="flex items-start gap-4">
-               <Key weight="fill" className="text-pastel-peach shrink-0" size={32} />
+             <div className="flex items-start gap-4 bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+               <CheckCircle weight="fill" className="text-pastel-peach shrink-0" size={32} />
                <div>
-                 <h4 className="text-xl font-bold mb-2">Role-Based Access Control</h4>
-                 <p className="text-slate-400 leading-relaxed">Granular permission structures (RBAC) ensuring employees and AI agents only access necessary operational data.</p>
+                 <h4 className="text-xl font-bold mb-2 text-white">Controls Assurance</h4>
+                 <p className="text-slate-400 leading-relaxed text-sm">Rigorously test the design (D&E) and operational effectiveness (O&E) of your defenses to confidently assure enterprise clients.</p>
                </div>
              </div>
           </div>

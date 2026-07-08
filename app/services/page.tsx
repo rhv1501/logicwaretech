@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { CheckCircle, Robot, Database, Desktop, DeviceMobile, Code, ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
+import Image from "next/image";
 
 const ARCHITECTURES = [
   {
@@ -12,6 +13,7 @@ const ARCHITECTURES = [
     icon: <Robot weight="fill" size={40} />,
     color: "bg-pastel-blue",
     textColor: "text-[#4F46E5]",
+    image: "/images/services/ai.png",
     deliverables: ["Custom LLM Architecture & Fine-tuning", "Autonomous Task-Execution Agents", "Intelligent Conversational Workflows", "Data Analysis & Reporting Bots"]
   },
   {
@@ -21,6 +23,7 @@ const ARCHITECTURES = [
     icon: <Database weight="fill" size={40} />,
     color: "bg-pastel-purple",
     textColor: "text-[#9333EA]",
+    image: "/images/services/erp.png",
     deliverables: ["Odoo Architecture & Implementation", "HubSpot Ecosystem Automation", "Salesforce Advanced Integrations", "Secure Enterprise Data Migration"]
   },
   {
@@ -30,6 +33,7 @@ const ARCHITECTURES = [
     icon: <Desktop weight="fill" size={40} />,
     color: "bg-pastel-mint",
     textColor: "text-[#059669]",
+    image: "/images/services/web.png",
     deliverables: ["Next.js & React Ecosystems", "Headless Commerce Solutions", "Custom Executive Dashboards", "Scalable SaaS Portals"]
   },
   {
@@ -39,6 +43,7 @@ const ARCHITECTURES = [
     icon: <DeviceMobile weight="fill" size={40} />,
     color: "bg-pastel-peach",
     textColor: "text-[#EA580C]",
+    image: "/images/services/mobile.png",
     deliverables: ["iOS & Android Native Development", "React Native Cross-Platform Apps", "Mobile ERP/CRM Interfaces", "Real-time Data Synchronization"]
   },
   {
@@ -48,6 +53,7 @@ const ARCHITECTURES = [
     icon: <Code weight="fill" size={40} />,
     color: "bg-slate-200",
     textColor: "text-slate-700",
+    image: "/images/services/custom.png",
     deliverables: ["Legacy System Modernization", "Custom API Middleware", "Logistics & Routing Algorithms", "Internal Tooling & Admin Panels"]
   }
 ];
@@ -93,7 +99,7 @@ export default function ServicesPage() {
 
       {/* 2. THE SERVICES ARCHITECTURES */}
       <section className="w-full py-24 bg-slate-50 relative">
-        <div className="max-w-[1000px] mx-auto px-6 flex flex-col gap-16">
+        <div className="max-w-[1200px] mx-auto px-6 flex flex-col gap-16">
           
           {ARCHITECTURES.map((arch, idx) => (
             <motion.div 
@@ -102,25 +108,32 @@ export default function ServicesPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
-              className="bg-white rounded-[2rem] p-8 md:p-12 border border-slate-100 shadow-sm flex flex-col md:flex-row gap-12 items-start"
+              className="bg-white rounded-[2rem] border border-slate-100 shadow-sm flex flex-col md:flex-row overflow-hidden group hover:shadow-pastel-float transition-shadow duration-500"
             >
-              {/* Left: Icon & Title */}
-              <div className="w-full md:w-1/3 flex flex-col items-start shrink-0">
-                <div className={`w-20 h-20 rounded-[1.5rem] ${arch.color} ${arch.textColor} flex items-center justify-center mb-6`}>
-                  {arch.icon}
-                </div>
-                <h2 className="text-3xl font-bold text-slate-900 leading-tight">{arch.title}</h2>
+              {/* Image Side - Alternating */}
+              <div className={`w-full md:w-1/2 relative min-h-[300px] md:min-h-[400px] bg-slate-100 overflow-hidden ${idx % 2 !== 0 ? 'md:order-2' : ''}`}>
+                <Image 
+                  src={arch.image}
+                  alt={arch.title}
+                  fill
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                />
               </div>
 
-              {/* Right: Desc & Deliverables */}
-              <div className="w-full md:w-2/3 flex flex-col gap-6">
-                <p className="text-lg text-slate-600 leading-relaxed">{arch.desc}</p>
-                <div className="pt-6 border-t border-slate-100">
+              {/* Content Side */}
+              <div className="w-full md:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col items-start justify-center bg-white">
+                <div className={`w-16 h-16 rounded-2xl ${arch.color} ${arch.textColor} flex items-center justify-center mb-6`}>
+                  {arch.icon}
+                </div>
+                <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 leading-tight mb-4">{arch.title}</h2>
+                <p className="text-lg text-slate-600 leading-relaxed mb-8">{arch.desc}</p>
+                
+                <div className="w-full pt-6 border-t border-slate-100">
                   <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">Key Deliverables</h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="flex flex-col gap-4">
                     {arch.deliverables.map((item, i) => (
                       <div key={i} className="flex items-start gap-3">
-                        <CheckCircle weight="fill" className={arch.textColor} size={20} />
+                        <CheckCircle weight="fill" className={`${arch.textColor} shrink-0 mt-1`} size={20} />
                         <span className="text-slate-800 font-semibold">{item}</span>
                       </div>
                     ))}

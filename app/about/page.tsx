@@ -99,8 +99,8 @@ export default function AboutPage() {
                 </div>
               </div>
               <div className="flex flex-col gap-2">
-                <h4 className="text-2xl font-bold text-slate-900">Swastik Davey</h4>
-                <p className="text-sm font-bold uppercase tracking-wider text-primary">Strategy & Operations</p>
+                <h4 className="text-2xl font-bold text-slate-900">Swastik Dave</h4>
+                <p className="text-sm font-bold uppercase tracking-wider text-primary">Founder & CEO</p>
                 <p className="text-slate-600 mt-2">20+ years of corporate leadership and enterprise scaling experience, architecting business growth from the top down.</p>
                 <Link href="#" className="mt-2 text-slate-400 hover:text-[#0A66C2] transition-colors self-center sm:self-start">
                   <LinkedinLogo weight="fill" size={24} />

@@ -33,7 +33,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="mx-auto max-w-[1200px] mt-24 flex flex-col md:flex-row items-center justify-between border-t border-slate-100 pt-8 text-xs font-bold uppercase tracking-widest text-slate-400 gap-4">
-        <p>© {new Date().getFullYear()} LogicWare Technology.</p>
+        <p>© {new Date().getFullYear()} LogicWare Technologies LLP.</p>
         <p>Intelligent Automation.</p>
       </div>
     </footer>
