@@ -8,8 +8,8 @@ import Image from "next/image";
 const ARCHITECTURES = [
   {
     id: "ai-systems",
-    title: "Smart AI Assistants",
-    desc: "Get AI tools that answer customer questions, handle boring tasks, and organize your data automatically 24/7.",
+    title: "AI Agentic Systems",
+    desc: "Deploy autonomous AI workers that go beyond basic chatbots. They can actually reason, make decisions, and execute complete business workflows for you 24/7.",
     icon: <Robot weight="fill" size={40} />,
     color: "bg-pastel-blue",
     textColor: "text-[#4F46E5]",
@@ -18,7 +18,7 @@ const ARCHITECTURES = [
   },
   {
     id: "erp-crm",
-    title: "Automated Sales & Operations",
+    title: "ERP & CRM Workflows",
     desc: "We connect your sales tools and operations so everything runs smoothly. No more lost leads or manual typing.",
     icon: <Database weight="fill" size={40} />,
     color: "bg-pastel-purple",
@@ -28,7 +28,7 @@ const ARCHITECTURES = [
   },
   {
     id: "web-apps",
-    title: "Custom Websites & Portals",
+    title: "Web Applications",
     desc: "Fast, beautiful, and easy-to-use websites designed specifically to turn your visitors into paying customers.",
     icon: <Desktop weight="fill" size={40} />,
     color: "bg-pastel-mint",
@@ -38,7 +38,7 @@ const ARCHITECTURES = [
   },
   {
     id: "mobile-apps",
-    title: "Mobile Apps for iOS & Android",
+    title: "Mobile Applications",
     desc: "Build your own branded mobile app so your customers can buy, book, or connect with you right from their phones.",
     icon: <DeviceMobile weight="fill" size={40} />,
     color: "bg-pastel-peach",
@@ -48,7 +48,7 @@ const ARCHITECTURES = [
   },
   {
     id: "custom-software",
-    title: "Software Built Just For You",
+    title: "Custom Software",
     desc: "Stop forcing your team to use software that doesn't fit. We build exact solutions tailored to how your business actually runs.",
     icon: <Code weight="fill" size={40} />,
     color: "bg-slate-200",

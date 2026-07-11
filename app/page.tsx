@@ -9,15 +9,15 @@ import { useState } from "react";
 const ARCHITECTURES = [
   {
     id: "ai",
-    title: "Smart AI Assistants",
-    desc: "Get digital assistants that can answer customer questions, organize data, and work 24/7 without needing a break.",
+    title: "AI Agentic Systems",
+    desc: "Deploy autonomous AI workers that go beyond basic chatbots. They can actually reason, make decisions, and execute complete business workflows for you 24/7.",
     icon: <Robot weight="fill" size={28} />,
     color: "bg-pastel-blue text-[#4F46E5]",
     image: "/images/services/ai.png"
   },
   {
     id: "erp",
-    title: "Automated Sales & Operations",
+    title: "ERP & CRM Workflows",
     desc: "We connect your sales and operations tools so leads turn into customers automatically, with zero missed follow-ups.",
     icon: <Database weight="fill" size={28} />,
     color: "bg-pastel-purple text-[#9333EA]",
@@ -25,7 +25,7 @@ const ARCHITECTURES = [
   },
   {
     id: "web",
-    title: "Custom Websites & Portals",
+    title: "Web Applications",
     desc: "Fast, beautiful, and easy-to-use websites that turn visitors into paying customers.",
     icon: <Desktop weight="fill" size={28} />,
     color: "bg-pastel-mint text-[#059669]",
@@ -33,7 +33,7 @@ const ARCHITECTURES = [
   },
   {
     id: "mobile",
-    title: "Mobile Apps for iOS & Android",
+    title: "Mobile Applications",
     desc: "Build your own branded mobile app to give your customers a premium experience right on their phones.",
     icon: <DeviceMobile weight="fill" size={28} />,
     color: "bg-pastel-peach text-[#EA580C]",
@@ -41,7 +41,7 @@ const ARCHITECTURES = [
   },
   {
     id: "custom",
-    title: "Software Built Just For You",
+    title: "Custom Software",
     desc: "Stop using cookie-cutter software that doesn't fit. We build exact solutions for your unique business needs.",
     icon: <Code weight="fill" size={28} />,
     color: "bg-slate-200 text-slate-700",
