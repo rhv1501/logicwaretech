@@ -9,40 +9,40 @@ import { useState } from "react";
 const ARCHITECTURES = [
   {
     id: "ai",
-    title: "AI Agentic Systems",
-    desc: "Deploy autonomous AI workers designed to reason, decide, and execute complex tasks 24/7 without human intervention.",
+    title: "Smart AI Assistants",
+    desc: "Get digital assistants that can answer customer questions, organize data, and work 24/7 without needing a break.",
     icon: <Robot weight="fill" size={28} />,
     color: "bg-pastel-blue text-[#4F46E5]",
     image: "/images/services/ai.png"
   },
   {
     id: "erp",
-    title: "ERP & CRM Workflows",
-    desc: "Automated pipelines moving leads from capture to close with zero friction. Scalable databases and operational flows.",
+    title: "Automated Sales & Operations",
+    desc: "We connect your sales and operations tools so leads turn into customers automatically, with zero missed follow-ups.",
     icon: <Database weight="fill" size={28} />,
     color: "bg-pastel-purple text-[#9333EA]",
     image: "/images/services/erp.png"
   },
   {
     id: "web",
-    title: "Web Applications",
-    desc: "High-performance, scalable web applications built for enterprise ecosystems with consumer-grade interfaces.",
+    title: "Custom Websites & Portals",
+    desc: "Fast, beautiful, and easy-to-use websites that turn visitors into paying customers.",
     icon: <Desktop weight="fill" size={28} />,
     color: "bg-pastel-mint text-[#059669]",
     image: "/images/services/web.png"
   },
   {
     id: "mobile",
-    title: "Mobile Applications",
-    desc: "Native and cross-platform mobile applications engineered for seamless user experiences and massive data payloads.",
+    title: "Mobile Apps for iOS & Android",
+    desc: "Build your own branded mobile app to give your customers a premium experience right on their phones.",
     icon: <DeviceMobile weight="fill" size={28} />,
     color: "bg-pastel-peach text-[#EA580C]",
     image: "/images/services/mobile.png"
   },
   {
     id: "custom",
-    title: "Custom Software",
-    desc: "Bespoke operational software tailored exactly to your unique organizational requirements. No off-the-shelf compromises.",
+    title: "Software Built Just For You",
+    desc: "Stop using cookie-cutter software that doesn't fit. We build exact solutions for your unique business needs.",
     icon: <Code weight="fill" size={28} />,
     color: "bg-slate-200 text-slate-700",
     image: "/images/services/custom.png"
@@ -52,23 +52,23 @@ const ARCHITECTURES = [
 const FAQS = [
   {
     id: "faq1",
-    question: "Do we retain ownership of the source code and IP?",
-    answer: "Absolutely. Once the project is delivered and finalized, you own 100% of the intellectual property, source code, and custom integrations we built for your organization."
+    question: "Do we retain ownership of the source code?",
+    answer: "Absolutely. Once the project is finished and fully paid for, you own 100% of the software and custom tools we built for you."
   },
   {
     id: "faq2",
-    question: "How do you handle data migration from our legacy systems?",
-    answer: "We perform a rigorous architectural audit prior to any migration. We build custom API middlewares and secure data pipelines to extract, transform, and load (ETL) your data into the new ecosystem with zero downtime."
+    question: "Can you connect with the software we already use?",
+    answer: "Yes! We specialize in connecting different platforms so they talk to each other seamlessly. You don't have to change your favorite tools."
   },
   {
     id: "faq3",
-    question: "What is the typical timeline for deploying an automation system?",
-    answer: "Timelines vary by complexity. Standard CRM/ERP integrations can take 4-8 weeks, while custom AI agentic systems or full web platforms typically range from 3-6 months. We operate on strict, agreed-upon milestones."
+    question: "How long does a typical project take?",
+    answer: "It depends on what you need. Simple website or CRM setups might take 4-8 weeks, while custom apps or AI tools usually take 3-6 months. We always agree on a clear timeline upfront."
   },
   {
     id: "faq4",
-    question: "Do you offer post-deployment support and maintenance?",
-    answer: "Yes. Our systems are built to run autonomously, but we offer ongoing retainer packages for scaling the architecture, adding new features, and providing priority technical support."
+    question: "Do you provide support after launch?",
+    answer: "Yes. Our systems are built to be reliable, but we offer ongoing support packages to add new features, fix issues, and help you grow."
   }
 ];
 
@@ -93,7 +93,7 @@ export default function Home() {
               className="px-4 py-1.5 bg-white rounded-full border border-slate-100 flex items-center gap-2 mb-8 shadow-sm"
             >
               <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-xs font-bold uppercase tracking-widest text-slate-500">Operational Velocity</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-slate-500">Smart Business Solutions</span>
             </motion.div>
 
             <motion.h1 
@@ -102,7 +102,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 leading-[1.1] mb-6"
             >
-              Innovate. Automate. <span className="text-gradient-corporate">Elevate.</span>
+              Save Time. Grow Faster. <span className="text-gradient-corporate">Scale Easier.</span>
             </motion.h1>
 
             <motion.p 
@@ -111,7 +111,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl text-slate-600 leading-relaxed mb-10 max-w-lg"
             >
-              We engineer scalable web platforms, AI agent workflows, and deep ERP integrations that eliminate manual bottlenecks and drive measurable ROI.
+              We build custom websites, mobile apps, and AI tools that automate your busywork so you can focus entirely on growing your business.
             </motion.p>
 
             <motion.div
@@ -121,11 +121,25 @@ export default function Home() {
               className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
             >
               <Link href="/services" className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors flex items-center justify-center gap-2 shadow-pastel-soft">
-                Explore Solutions <ArrowRight weight="bold" />
+                See Our Services <ArrowRight weight="bold" />
               </Link>
               <Link href="/contact" className="bg-white hover:bg-slate-50 text-slate-800 border border-slate-200 px-8 py-4 rounded-xl font-semibold text-lg transition-colors flex items-center justify-center text-center">
                 Book a Strategy Call
               </Link>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="mt-10 bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex items-center gap-4 w-max"
+            >
+              <div className="w-12 h-12 rounded-full bg-pastel-mint flex items-center justify-center text-[#059669]">
+                <ChartLineUp weight="fill" size={24} />
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-slate-500">System Uptime</p>
+                <p className="text-xl font-bold text-slate-900">24/7</p>
+              </div>
             </motion.div>
           </div>
 
@@ -133,26 +147,18 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="w-full md:w-1/2 relative aspect-square md:aspect-auto md:h-[600px]"
+            className="w-full md:w-1/2 relative"
           >
-            <div className="absolute inset-0 glass-card rounded-[2rem] p-4 shadow-pastel-float border border-white rotate-2 transform-gpu transition-transform hover:rotate-0 duration-500">
-              <div className="w-full h-full rounded-[1.5rem] overflow-hidden relative bg-slate-50">
+            <div className="w-full glass-card rounded-[2rem] p-4 shadow-pastel-float border border-white rotate-2 transform-gpu transition-transform hover:rotate-0 duration-500">
+              <div className="w-full rounded-[1.5rem] overflow-hidden relative bg-slate-50 flex">
                 <Image 
                   src="/hero.jpeg" 
                   alt="Enterprise AI and ERP Solutions Dashboard" 
-                  fill 
-                  className="object-cover object-center opacity-90"
+                  width={1200}
+                  height={1200}
+                  className="w-full h-auto opacity-90"
                   priority
                 />
-                <div className="absolute bottom-6 left-6 bg-white p-4 rounded-xl shadow-lg border border-slate-100 flex items-center gap-4 animate-bounce" style={{ animationDuration: '3s' }}>
-                  <div className="w-12 h-12 rounded-full bg-pastel-mint flex items-center justify-center text-[#059669]">
-                    <ChartLineUp weight="fill" size={24} />
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-slate-500">System Uptime</p>
-                    <p className="text-xl font-bold text-slate-900">24/7</p>
-                  </div>
-                </div>
               </div>
             </div>
           </motion.div>
@@ -163,8 +169,8 @@ export default function Home() {
       <section className="w-full py-24 bg-slate-50 relative border-y border-slate-100">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Paradigm Shift</h2>
-            <h3 className="text-4xl font-bold text-slate-900 tracking-tight">Stop throwing humans at software problems.</h3>
+            <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">A Better Approach</h2>
+            <h3 className="text-4xl font-bold text-slate-900 tracking-tight">Stop wasting time on manual work.</h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -174,7 +180,7 @@ export default function Home() {
                 <XCircle weight="fill" className="text-red-400" size={32} /> The Old Way
               </h4>
               <ul className="flex flex-col gap-6">
-                {["Human team doing repetitive data entry.", "Siloed CRMs that don't talk to ERPs.", "Hiring more people to scale operations.", "Generic templates that break under load."].map((item, i) => (
+                {["Typing the same data over and over.", "Software tools that don't connect with each other.", "Hiring more people just to keep up.", "Cookie-cutter software that breaks easily."].map((item, i) => (
                   <li key={i} className="flex items-start gap-4">
                     <div className="w-2 h-2 rounded-full bg-red-400 mt-2 shrink-0" />
                     <span className="text-lg text-slate-500 font-medium">{item}</span>
@@ -189,7 +195,7 @@ export default function Home() {
                 <CheckCircle weight="fill" className="text-primary" size={32} /> The LogicWare Way
               </h4>
               <ul className="flex flex-col gap-6 relative z-10">
-                {["AI Agents routing and answering queries 24/7.", "Unified brain connecting all your platforms.", "Scaling via autonomous systems, not payroll.", "Custom architecture built for absolute leverage."].map((item, i) => (
+                {["Smart tools working 24/7 for you.", "One seamless system connecting everything.", "Growing your business without growing payroll.", "Custom solutions built exactly for your needs."].map((item, i) => (
                   <li key={i} className="flex items-start gap-4">
                     <div className="w-2 h-2 rounded-full bg-primary mt-2 shrink-0 shadow-glow-primary" />
                     <span className="text-lg text-slate-800 font-bold">{item}</span>
@@ -205,8 +211,8 @@ export default function Home() {
       <section className="w-full py-24 bg-white relative">
         <div className="max-w-[800px] mx-auto px-6 flex flex-col gap-12">
           <div className="text-center">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Core Architectures</h2>
-            <h3 className="text-4xl font-bold text-slate-900 tracking-tight">The foundation of operational velocity.</h3>
+            <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Our Services</h2>
+            <h3 className="text-4xl font-bold text-slate-900 tracking-tight">Everything you need to grow faster.</h3>
           </div>
 
           <div className="flex flex-col gap-4">
@@ -257,7 +263,7 @@ export default function Home() {
 
           <div className="flex justify-center mt-4">
             <Link href="/services" className="bg-white border border-slate-200 hover:border-primary hover:text-primary text-slate-700 px-8 py-4 rounded-xl font-bold transition-colors flex items-center gap-2 shadow-sm">
-              View Detailed Architectures <ArrowRight weight="bold" />
+              View All Services <ArrowRight weight="bold" />
             </Link>
           </div>
         </div>
@@ -268,18 +274,18 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
             <div className="max-w-2xl">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Domain Expertise</h2>
-              <h3 className="text-4xl font-bold text-slate-900 tracking-tight mb-4">Built for complex sectors.</h3>
-              <p className="text-lg text-slate-600">We engineer custom pipelines that respect the strict regulatory and operational demands of your specific sector.</p>
+              <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Industries We Serve</h2>
+              <h3 className="text-4xl font-bold text-slate-900 tracking-tight mb-4">We work across all major industries.</h3>
+              <p className="text-lg text-slate-600">We build custom systems that respect the specific needs and rules of your business.</p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "E-Commerce", desc: "Automated inventory sync & multi-channel logistics routing.", icon: <ShoppingCart weight="fill" size={32} />, color: "bg-pastel-blue", textColor: "text-[#4F46E5]" },
-              { title: "Manufacturing", desc: "ERP integrations connecting shop floor data to ledgers.", icon: <Factory weight="fill" size={32} />, color: "bg-pastel-purple", textColor: "text-[#9333EA]" },
-              { title: "Healthcare", desc: "HIPAA-compliant data processing and patient routing.", icon: <Heartbeat weight="fill" size={32} />, color: "bg-pastel-mint", textColor: "text-[#059669]" },
-              { title: "Finance", desc: "Real-time ledger reconciliation and risk-assessment pipelines.", icon: <Bank weight="fill" size={32} />, color: "bg-pastel-peach", textColor: "text-[#EA580C]" },
+              { title: "E-Commerce", desc: "Keep your inventory updated automatically across all stores.", icon: <ShoppingCart weight="fill" size={32} />, color: "bg-pastel-blue", textColor: "text-[#4F46E5]" },
+              { title: "Manufacturing", desc: "Connect your factory floor directly to your accounting software.", icon: <Factory weight="fill" size={32} />, color: "bg-pastel-purple", textColor: "text-[#9333EA]" },
+              { title: "Healthcare", desc: "Secure, compliant systems to manage patient data safely.", icon: <Heartbeat weight="fill" size={32} />, color: "bg-pastel-mint", textColor: "text-[#059669]" },
+              { title: "Finance", desc: "Real-time tracking and secure financial management tools.", icon: <Bank weight="fill" size={32} />, color: "bg-pastel-peach", textColor: "text-[#EA580C]" },
             ].map((sector, i) => (
               <div key={i} className="bg-white rounded-3xl p-8 border border-slate-100 hover:border-slate-300 transition-colors flex flex-col group shadow-sm">
                 <div className={`w-16 h-16 rounded-2xl ${sector.color} ${sector.textColor} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
@@ -296,10 +302,10 @@ export default function Home() {
       {/* 5. AGNOSTIC INTEGRATION (TECH STACK) */}
       <section className="w-full py-24 bg-white relative">
         <div className="max-w-[1200px] mx-auto px-6 text-center">
-          <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Agnostic Infrastructure</h2>
-          <h3 className="text-4xl font-bold text-slate-900 tracking-tight mb-6">We integrate with your existing ecosystem.</h3>
+          <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Seamless Integration</h2>
+          <h3 className="text-4xl font-bold text-slate-900 tracking-tight mb-6">We work with the tools you already use.</h3>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-16">
-            We don't force you into proprietary boxes. We are fully capable of architecting solutions using the tools, platforms, and databases that already align with your organization.
+            You don't need to learn complicated new systems. We build our solutions around the platforms, apps, and tools your team already knows and loves.
           </p>
           
           <div className="flex flex-wrap justify-center gap-4">
@@ -316,9 +322,9 @@ export default function Home() {
       <section className="w-full py-24 bg-slate-50 relative border-y border-slate-100">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">The Automation Advantage</h2>
-            <h3 className="text-4xl font-bold text-slate-900 tracking-tight">What your enterprise can achieve.</h3>
-            <p className="text-lg text-slate-600 mt-4">By transitioning from human-reliant data entry to autonomous architectures, organizations unlock exponential scaling capabilities without increasing headcount.</p>
+            <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">The Real Benefits</h2>
+            <h3 className="text-4xl font-bold text-slate-900 tracking-tight">What you can achieve with us.</h3>
+            <p className="text-lg text-slate-600 mt-4">By letting smart software handle the heavy lifting, you unlock massive growth potential without having to hire an army of new staff.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -327,8 +333,8 @@ export default function Home() {
                  <TrendUp weight="bold" size={40} />
                </div>
                <h4 className="text-5xl font-bold text-slate-900 mb-4">80%</h4>
-               <p className="text-lg font-bold text-slate-800 mb-2">Reduction in Manual Entry</p>
-               <p className="text-slate-500">Free your team from repetitive tasks by letting API bridges and AI agents handle data routing.</p>
+               <p className="text-lg font-bold text-slate-800 mb-2">Less Busywork</p>
+               <p className="text-slate-500">Free your team from repetitive tasks by letting smart tools handle the typing, clicking, and routing.</p>
             </div>
 
             <div className="bg-white p-10 rounded-3xl border border-slate-100 shadow-sm flex flex-col items-center text-center hover:shadow-pastel-float transition-shadow">
@@ -336,8 +342,8 @@ export default function Home() {
                  <Clock weight="bold" size={40} />
                </div>
                <h4 className="text-5xl font-bold text-slate-900 mb-4">24/7</h4>
-               <p className="text-lg font-bold text-slate-800 mb-2">Autonomous Operations</p>
-               <p className="text-slate-500">Your systems never sleep. Process orders, answer queries, and sync databases around the clock.</p>
+               <p className="text-lg font-bold text-slate-800 mb-2">Constant Productivity</p>
+               <p className="text-slate-500">Your new systems never sleep. Process orders, answer questions, and update files around the clock.</p>
             </div>
 
             <div className="bg-white p-10 rounded-3xl border border-slate-100 shadow-sm flex flex-col items-center text-center hover:shadow-pastel-float transition-shadow">
@@ -345,8 +351,8 @@ export default function Home() {
                  <Infinity weight="bold" size={40} />
                </div>
                <h4 className="text-5xl font-bold text-slate-900 mb-4">100%</h4>
-               <p className="text-lg font-bold text-slate-800 mb-2">Frictionless Scalability</p>
-               <p className="text-slate-500">Whether you add 10 or 10,000 users, properly engineered architectures do not break under load.</p>
+               <p className="text-lg font-bold text-slate-800 mb-2">Grow Without Stress</p>
+               <p className="text-slate-500">Whether you add 10 or 10,000 customers, our robust solutions will not break or slow down.</p>
             </div>
           </div>
         </div>
@@ -357,7 +363,7 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Our Methodology</h2>
-            <h3 className="text-4xl font-bold text-slate-900 tracking-tight">How we execute precision architecture.</h3>
+            <h3 className="text-4xl font-bold text-slate-900 tracking-tight">How we work with you.</h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -367,8 +373,8 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-xl bg-pastel-blue text-[#4F46E5] flex items-center justify-center mb-6">
                   <MagnifyingGlass weight="bold" size={24} />
                 </div>
-                <h4 className="text-2xl font-bold text-slate-900 mb-3">Architectural Audit</h4>
-                <p className="text-slate-600 leading-relaxed">We map your existing data flows, identify critical operational bottlenecks, and design a custom automation roadmap.</p>
+                <h4 className="text-2xl font-bold text-slate-900 mb-3">Discovery & Planning</h4>
+                <p className="text-slate-600 leading-relaxed">We listen to your goals and find exactly where smart software can save you the most time and money.</p>
               </div>
             </div>
             <div className="flex flex-col gap-4 relative">
@@ -377,8 +383,8 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-xl bg-pastel-purple text-[#9333EA] flex items-center justify-center mb-6">
                   <Code weight="bold" size={24} />
                 </div>
-                <h4 className="text-2xl font-bold text-slate-900 mb-3">Intelligent Build</h4>
-                <p className="text-slate-600 leading-relaxed">We deploy our elite engineering stack to wire your tools together, write custom middleware, and integrate AI models.</p>
+                <h4 className="text-2xl font-bold text-slate-900 mb-3">Custom Development</h4>
+                <p className="text-slate-600 leading-relaxed">Our experts build your solution, keeping you updated every step of the way without using confusing tech jargon.</p>
               </div>
             </div>
             <div className="flex flex-col gap-4 relative">
@@ -387,8 +393,8 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-xl bg-pastel-mint text-[#059669] flex items-center justify-center mb-6">
                   <RocketLaunch weight="bold" size={24} />
                 </div>
-                <h4 className="text-2xl font-bold text-slate-900 mb-3">Autonomous Launch</h4>
-                <p className="text-slate-600 leading-relaxed">Your new digital ecosystem is deployed securely. We monitor the systems as they take over routine operations.</p>
+                <h4 className="text-2xl font-bold text-slate-900 mb-3">Launch & Support</h4>
+                <p className="text-slate-600 leading-relaxed">We launch your new tools safely and provide ongoing support so you never have to worry about things breaking.</p>
               </div>
             </div>
           </div>
@@ -403,12 +409,12 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-6 relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 border-b border-white/10 pb-8">
             <div className="max-w-2xl">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-pastel-blue mb-4">Audit-Ready Frameworks</h2>
-              <h3 className="text-4xl font-bold tracking-tight mb-4">Security & Compliance.</h3>
-              <p className="text-lg text-slate-300">We systematically design, implement, and audit your Information Security Management System (ISMS) from the ground up, guaranteeing enterprise-level trust.</p>
+              <h2 className="text-sm font-bold uppercase tracking-widest text-pastel-blue mb-4">Secure & Trusted</h2>
+              <h3 className="text-4xl font-bold tracking-tight mb-4">We Keep Your Data Safe.</h3>
+              <p className="text-lg text-slate-300">We build your systems with top-tier security standards so you can confidently win bigger clients and pass any security check.</p>
             </div>
             <Link href="/compliance" className="bg-white/10 hover:bg-white/20 transition-colors p-4 rounded-xl border border-white/20 flex items-center gap-3 shrink-0">
-              <span className="font-bold text-sm tracking-wider uppercase text-white">View Full Compliance Framework</span>
+              <span className="font-bold text-sm tracking-wider uppercase text-white">View Security Details</span>
               <ArrowRight weight="bold" />
             </Link>
           </div>
@@ -417,29 +423,29 @@ export default function Home() {
              <div className="flex items-start gap-4 bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
                <ShieldCheck weight="fill" className="text-pastel-blue shrink-0" size={32} />
                <div>
-                 <h4 className="text-xl font-bold mb-2 text-white">ISO 27001 Readiness</h4>
-                 <p className="text-slate-400 leading-relaxed text-sm">End-to-end ISO/IEC 27001 implementation, gap assessment, and pre-certification auditing led by a certified Lead Auditor.</p>
+                 <h4 className="text-xl font-bold mb-2 text-white">Global Security Standards</h4>
+                 <p className="text-slate-400 leading-relaxed text-sm">We ensure your systems meet strict ISO 27001 standards to protect your most valuable information.</p>
                </div>
              </div>
              <div className="flex items-start gap-4 bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
                <LockKey weight="fill" className="text-pastel-purple shrink-0" size={32} />
                <div>
-                 <h4 className="text-xl font-bold mb-2 text-white">DPDPA & Data Privacy</h4>
-                 <p className="text-slate-400 leading-relaxed text-sm">Map data flows, build robust consent architectures, and establish the mandatory technical measures to safeguard Principal rights.</p>
+                 <h4 className="text-xl font-bold mb-2 text-white">Complete Data Privacy</h4>
+                 <p className="text-slate-400 leading-relaxed text-sm">We make sure you follow all modern privacy laws, keeping your customers' data completely safe.</p>
                </div>
              </div>
              <div className="flex items-start gap-4 bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
                <ChartBar weight="fill" className="text-pastel-mint shrink-0" size={32} />
                <div>
-                 <h4 className="text-xl font-bold mb-2 text-white">IT Risk Management</h4>
-                 <p className="text-slate-400 leading-relaxed text-sm">Independent risk profiling and quantitative analysis translating technical vulnerabilities into structured business risk registers.</p>
+                 <h4 className="text-xl font-bold mb-2 text-white">Risk Protection</h4>
+                 <p className="text-slate-400 leading-relaxed text-sm">We actively identify and fix security gaps before hackers or accidents can hurt your business.</p>
                </div>
              </div>
              <div className="flex items-start gap-4 bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
                <CheckCircle weight="fill" className="text-pastel-peach shrink-0" size={32} />
                <div>
-                 <h4 className="text-xl font-bold mb-2 text-white">Controls Assurance</h4>
-                 <p className="text-slate-400 leading-relaxed text-sm">Rigorously test the design (D&E) and operational effectiveness (O&E) of your defenses to confidently assure enterprise clients.</p>
+                 <h4 className="text-xl font-bold mb-2 text-white">Reliable Operations</h4>
+                 <p className="text-slate-400 leading-relaxed text-sm">We regularly test your software to make sure everything works perfectly and safely under pressure.</p>
                </div>
              </div>
           </div>
@@ -450,16 +456,16 @@ export default function Home() {
       <section className="w-full py-24 bg-white relative">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Engagement Models</h2>
-            <h3 className="text-4xl font-bold text-slate-900 tracking-tight mb-6">Flexible, transparent, and scalable.</h3>
-            <p className="text-lg text-slate-600">Tailored frameworks tailored to your specific organizational needs.</p>
+            <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Pricing Models</h2>
+            <h3 className="text-4xl font-bold text-slate-900 tracking-tight mb-6">Simple, clear, and flexible.</h3>
+            <p className="text-lg text-slate-600">Choose the setup that fits your exact budget and goals.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: "Dedicated Team", desc: "Scale your delivery capacity instantly with a dedicated pod of architects and engineers managed directly by you.", icon: <Users weight="fill" size={32} />, color: "bg-pastel-blue", textColor: "text-[#4F46E5]", points: ["Monthly billing", "Direct control"] },
-              { title: "Fixed Price", desc: "Best for well-defined scopes. We take full ownership of delivery within a strictly agreed budget and timeline.", icon: <Storefront weight="fill" size={32} />, color: "bg-pastel-purple", textColor: "text-[#9333EA]", points: ["Milestone-based", "Zero budget overruns"] },
-              { title: "Time & Material", desc: "Ideal for evolving requirements. Pay strictly for the hours logged by our specialists as priorities shift.", icon: <Timer weight="fill" size={32} />, color: "bg-pastel-mint", textColor: "text-[#059669]", points: ["Absolute flexibility", "Agile execution"] }
+              { title: "Hire a Dedicated Team", desc: "Get your own team of experts working full-time on your projects for a simple monthly fee.", icon: <Users weight="fill" size={32} />, color: "bg-pastel-blue", textColor: "text-[#4F46E5]", points: ["Simple monthly billing", "Full control over tasks"] },
+              { title: "Fixed Project Pricing", desc: "Best when you know exactly what you need built. We agree on a flat price and deliver it.", icon: <Storefront weight="fill" size={32} />, color: "bg-pastel-purple", textColor: "text-[#9333EA]", points: ["Clear milestone goals", "No surprise bills"] },
+              { title: "Pay As You Go", desc: "Great for ongoing changes. You simply pay for the exact hours our specialists work.", icon: <Timer weight="fill" size={32} />, color: "bg-pastel-mint", textColor: "text-[#059669]", points: ["Complete flexibility", "Change plans anytime"] }
             ].map((model, i) => (
               <div key={i} className="bg-slate-50 rounded-3xl p-8 border border-slate-100 flex flex-col shadow-sm">
                 <div className={`w-16 h-16 rounded-2xl ${model.color} ${model.textColor} flex items-center justify-center mb-6`}>
@@ -531,12 +537,12 @@ export default function Home() {
 
       {/* 11. CTA */}
       <section className="w-full py-32 bg-white relative flex flex-col items-center text-center px-6 border-t border-slate-100">
-        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">Deploy Systems.</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">Ready to Grow?</h2>
         <p className="text-xl text-slate-600 max-w-2xl mb-10">
-          Ready to upgrade your operational infrastructure? Let's build your competitive advantage.
+          Stop struggling with bad software and endless manual tasks. Let's build something great.
         </p>
         <Link href="/contact" className="bg-primary hover:bg-primary/90 text-white px-10 py-5 rounded-xl font-semibold text-lg transition-transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2 shadow-pastel-soft">
-          Request Architecture Review <ArrowRight weight="bold" />
+          Get a Free Consultation <ArrowRight weight="bold" />
         </Link>
       </section>
 

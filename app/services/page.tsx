@@ -8,53 +8,53 @@ import Image from "next/image";
 const ARCHITECTURES = [
   {
     id: "ai-systems",
-    title: "AI Agentic Systems",
-    desc: "We deploy autonomous AI workers designed to reason, decide, and execute complex tasks 24/7 without human intervention, dramatically reducing operational overhead.",
+    title: "Smart AI Assistants",
+    desc: "Get AI tools that answer customer questions, handle boring tasks, and organize your data automatically 24/7.",
     icon: <Robot weight="fill" size={40} />,
     color: "bg-pastel-blue",
     textColor: "text-[#4F46E5]",
     image: "/images/services/ai.png",
-    deliverables: ["Custom LLM Architecture & Fine-tuning", "Autonomous Task-Execution Agents", "Intelligent Conversational Workflows", "Data Analysis & Reporting Bots"]
+    deliverables: ["Custom AI Chatbots", "Automated Task Helpers", "Smart Data Organization", "24/7 Customer Support Bots"]
   },
   {
     id: "erp-crm",
-    title: "ERP & CRM Workflows",
-    desc: "Automated pipelines moving leads from capture to close with zero friction. We architect databases and operational flows that scale endlessly.",
+    title: "Automated Sales & Operations",
+    desc: "We connect your sales tools and operations so everything runs smoothly. No more lost leads or manual typing.",
     icon: <Database weight="fill" size={40} />,
     color: "bg-pastel-purple",
     textColor: "text-[#9333EA]",
     image: "/images/services/erp.png",
-    deliverables: ["Odoo Architecture & Implementation", "HubSpot Ecosystem Automation", "Salesforce Advanced Integrations", "Secure Enterprise Data Migration"]
+    deliverables: ["Sales Automation Setup", "Connecting Your Apps", "Customer Data Organization", "Safe Data Transfers"]
   },
   {
     id: "web-apps",
-    title: "Web Applications",
-    desc: "High-performance, scalable web applications built for enterprise ecosystems. We deliver award-winning, consumer-grade interfaces.",
+    title: "Custom Websites & Portals",
+    desc: "Fast, beautiful, and easy-to-use websites designed specifically to turn your visitors into paying customers.",
     icon: <Desktop weight="fill" size={40} />,
     color: "bg-pastel-mint",
     textColor: "text-[#059669]",
     image: "/images/services/web.png",
-    deliverables: ["Next.js & React Ecosystems", "Headless Commerce Solutions", "Custom Executive Dashboards", "Scalable SaaS Portals"]
+    deliverables: ["Fast Loading Websites", "E-Commerce Stores", "Easy-to-Read Dashboards", "Customer Portals"]
   },
   {
     id: "mobile-apps",
-    title: "Mobile Applications",
-    desc: "Native and cross-platform mobile applications engineered for seamless user experiences and massive data payloads.",
+    title: "Mobile Apps for iOS & Android",
+    desc: "Build your own branded mobile app so your customers can buy, book, or connect with you right from their phones.",
     icon: <DeviceMobile weight="fill" size={40} />,
     color: "bg-pastel-peach",
     textColor: "text-[#EA580C]",
     image: "/images/services/mobile.png",
-    deliverables: ["iOS & Android Native Development", "React Native Cross-Platform Apps", "Mobile ERP/CRM Interfaces", "Real-time Data Synchronization"]
+    deliverables: ["iPhone App Development", "Android App Development", "Mobile Payment Setup", "Real-Time Updates"]
   },
   {
     id: "custom-software",
-    title: "Custom Software",
-    desc: "Bespoke operational software tailored exactly to your unique organizational requirements. No off-the-shelf compromises.",
+    title: "Software Built Just For You",
+    desc: "Stop forcing your team to use software that doesn't fit. We build exact solutions tailored to how your business actually runs.",
     icon: <Code weight="fill" size={40} />,
     color: "bg-slate-200",
     textColor: "text-slate-700",
     image: "/images/services/custom.png",
-    deliverables: ["Legacy System Modernization", "Custom API Middleware", "Logistics & Routing Algorithms", "Internal Tooling & Admin Panels"]
+    deliverables: ["Updating Old Systems", "Connecting Different Tools", "Custom Internal Tools", "Automating Daily Tasks"]
   }
 ];
 
@@ -73,7 +73,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.8 }}
             className="px-4 py-1.5 bg-white rounded-full border border-slate-100 inline-flex mx-auto items-center gap-2 mb-4 shadow-sm"
           >
-            <span className="text-xs font-bold uppercase tracking-widest text-slate-500">Core Architectures</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-slate-500">Our Services</span>
           </motion.div>
 
           <motion.h1 
@@ -82,8 +82,8 @@ export default function ServicesPage() {
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 leading-[1.1]"
           >
-            Comprehensive <br/>
-            <span className="text-gradient-corporate">Digital Solutions.</span>
+            Everything You Need <br/>
+            <span className="text-gradient-corporate">To Grow.</span>
           </motion.h1>
           
           <motion.p 
@@ -92,7 +92,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto mt-4"
           >
-            We don't sell hours. We engineer leverage. Explore the core architectures we deploy to make your organization untouchable.
+            We build software that actually saves you time and makes you money. Explore our core services below to see how we can help your business.
           </motion.p>
         </div>
       </section>
@@ -148,8 +148,8 @@ export default function ServicesPage() {
       
       {/* CTA */}
       <section className="w-full py-24 bg-white text-center px-6 border-t border-slate-100">
-        <h2 className="text-4xl font-bold text-slate-900 mb-6 tracking-tight">Deploy Systems.</h2>
-        <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-10">Ready to upgrade your operational infrastructure? Let's build your competitive advantage.</p>
+        <h2 className="text-4xl font-bold text-slate-900 mb-6 tracking-tight">Ready to Grow?</h2>
+        <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-10">Stop struggling with bad software and endless manual tasks. Let's build something great.</p>
         <Link href="/contact" className="bg-primary hover:bg-primary/90 text-white px-10 py-5 rounded-xl font-semibold text-lg transition-transform hover:scale-105 flex mx-auto w-max items-center justify-center gap-2 shadow-pastel-soft">
           Contact Us <ArrowRight weight="bold" />
         </Link>
