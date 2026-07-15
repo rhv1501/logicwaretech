@@ -1,0 +1,377 @@
+{
+  "communities": {
+    "0": [
+      "clsx",
+      "framer_motion",
+      "lenis",
+      "mermaid",
+      "next",
+      "nodemailer",
+      "package_dependencies",
+      "package_dependencies_clsx",
+      "package_dependencies_framer_motion",
+      "package_dependencies_lenis",
+      "package_dependencies_mermaid",
+      "package_dependencies_next",
+      "package_dependencies_nodemailer",
+      "package_dependencies_phosphor_icons_react",
+      "package_dependencies_react",
+      "package_dependencies_react_dom",
+      "package_dependencies_tailwind_merge",
+      "phosphor_icons_react",
+      "react",
+      "react_dom",
+      "tailwind_merge"
+    ],
+    "1": [
+      "agent_skills_ui_ux_pro_max_scripts_core",
+      "agent_skills_ui_ux_pro_max_scripts_core_bm25",
+      "agent_skills_ui_ux_pro_max_scripts_core_bm25_fit",
+      "agent_skills_ui_ux_pro_max_scripts_core_bm25_init",
+      "agent_skills_ui_ux_pro_max_scripts_core_bm25_score",
+      "agent_skills_ui_ux_pro_max_scripts_core_bm25_tokenize",
+      "agent_skills_ui_ux_pro_max_scripts_core_detect_domain",
+      "agent_skills_ui_ux_pro_max_scripts_core_load_csv",
+      "agent_skills_ui_ux_pro_max_scripts_core_rationale_110",
+      "agent_skills_ui_ux_pro_max_scripts_core_rationale_115",
+      "agent_skills_ui_ux_pro_max_scripts_core_rationale_134",
+      "agent_skills_ui_ux_pro_max_scripts_core_rationale_160",
+      "agent_skills_ui_ux_pro_max_scripts_core_rationale_166",
+      "agent_skills_ui_ux_pro_max_scripts_core_rationale_191",
+      "agent_skills_ui_ux_pro_max_scripts_core_rationale_213",
+      "agent_skills_ui_ux_pro_max_scripts_core_rationale_235",
+      "agent_skills_ui_ux_pro_max_scripts_core_rationale_97",
+      "agent_skills_ui_ux_pro_max_scripts_core_search",
+      "agent_skills_ui_ux_pro_max_scripts_core_search_csv",
+      "agent_skills_ui_ux_pro_max_scripts_core_search_stack"
+    ],
+    "2": [
+      "agent_skills_ui_ux_pro_max_scripts_design_system",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_detect_page_type",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_format_ascii_box",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_format_markdown",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_format_master_md",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_format_page_override_md",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_generate_design_system",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_generate_intelligent_overrides",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_persist_design_system",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_rationale_1021",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_rationale_243",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_rationale_368",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_rationale_464",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_rationale_492",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_rationale_543",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_rationale_806",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_rationale_915",
+      "agent_skills_ui_ux_pro_max_scripts_search",
+      "agent_skills_ui_ux_pro_max_scripts_search_format_output",
+      "agent_skills_ui_ux_pro_max_scripts_search_rationale_31"
+    ],
+    "3": [
+      "eslint",
+      "eslint_config_next",
+      "package_devdependencies",
+      "package_devdependencies_eslint",
+      "package_devdependencies_eslint_config_next",
+      "package_devdependencies_tailwindcss",
+      "package_devdependencies_tailwindcss_postcss",
+      "package_devdependencies_types_node",
+      "package_devdependencies_types_nodemailer",
+      "package_devdependencies_types_react",
+      "package_devdependencies_types_react_dom",
+      "package_devdependencies_typescript",
+      "tailwindcss",
+      "tailwindcss_postcss",
+      "types_node",
+      "types_nodemailer",
+      "types_react",
+      "types_react_dom",
+      "typescript"
+    ],
+    "4": [
+      "ref_dom",
+      "ref_dom_iterable",
+      "ref_esnext",
+      "tsconfig_compileroptions",
+      "tsconfig_compileroptions_allowjs",
+      "tsconfig_compileroptions_esmoduleinterop",
+      "tsconfig_compileroptions_incremental",
+      "tsconfig_compileroptions_isolatedmodules",
+      "tsconfig_compileroptions_jsx",
+      "tsconfig_compileroptions_lib",
+      "tsconfig_compileroptions_module",
+      "tsconfig_compileroptions_moduleresolution",
+      "tsconfig_compileroptions_noemit",
+      "tsconfig_compileroptions_paths",
+      "tsconfig_compileroptions_plugins",
+      "tsconfig_compileroptions_resolvejsonmodule",
+      "tsconfig_compileroptions_skiplibcheck",
+      "tsconfig_compileroptions_strict",
+      "tsconfig_compileroptions_target"
+    ],
+    "5": [
+      "agent_skills_ui_ux_pro_max_scripts_design_system_designsystemgenerator",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_designsystemgenerator_apply_reasoning",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_designsystemgenerator_extract_results",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_designsystemgenerator_find_reasoning_rule",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_designsystemgenerator_generate",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_designsystemgenerator_init",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_designsystemgenerator_load_reasoning",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_designsystemgenerator_multi_domain_search",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_designsystemgenerator_select_best_match",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_rationale_123",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_rationale_160",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_rationale_164",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_rationale_38",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_rationale_44",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_rationale_52",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_rationale_65",
+      "agent_skills_ui_ux_pro_max_scripts_design_system_rationale_89"
+    ],
+    "6": [
+      "app_layout",
+      "app_layout_metadata",
+      "app_layout_playfair",
+      "app_layout_plusjakartasans",
+      "app_layout_rootlayout",
+      "app_layout_spacegrotesk",
+      "components_customcursor",
+      "components_customcursor_customcursor",
+      "components_footer",
+      "components_footer_footer",
+      "components_navbar",
+      "components_navbar_nav_links",
+      "components_navbar_navbar",
+      "components_smoothscrolling",
+      "components_smoothscrolling_smoothscrolling"
+    ],
+    "7": [
+      "artificial_intelligence",
+      "business_process_automation",
+      "compliance",
+      "digital_transformation",
+      "dpdpa_compliance",
+      "enterprise_solutions",
+      "governance_risk",
+      "information_security",
+      "iso_27001",
+      "logicware",
+      "security_by_design"
+    ],
+    "8": [
+      "ref_mts",
+      "ref_next_dev_types_ts",
+      "ref_next_env_d_ts",
+      "ref_next_types_ts",
+      "ref_node_modules",
+      "ref_ts",
+      "ref_tsx",
+      "tsconfig",
+      "tsconfig_exclude",
+      "tsconfig_include"
+    ],
+    "9": [
+      "package",
+      "package_name",
+      "package_private",
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_lint",
+      "package_scripts_start",
+      "package_version"
+    ],
+    "10": [
+      "app_page",
+      "app_page_architectures",
+      "app_page_faqs",
+      "app_page_home",
+      "components_mermaidchart",
+      "components_mermaidchart_mermaidchart",
+      "components_mermaidchart_mermaidchartprops"
+    ],
+    "11": [
+      "app_template",
+      "app_template_template",
+      "components_preloader",
+      "components_preloader_preloader",
+      "utils_store",
+      "utils_store_setglobalinitialloadcomplete"
+    ],
+    "12": [
+      "app_compliance_page",
+      "app_compliance_page_compliancepage",
+      "app_compliance_page_pillars",
+      "app_compliance_page_services"
+    ],
+    "13": [
+      "app_services_page",
+      "app_services_page_architectures",
+      "app_services_page_servicespage"
+    ],
+    "14": [
+      "app_about_page",
+      "app_about_page_aboutpage"
+    ],
+    "15": [
+      "app_actions_contact",
+      "app_actions_contact_submitcontactform"
+    ],
+    "16": [
+      "app_contact_page",
+      "app_contact_page_contactpage"
+    ],
+    "17": [
+      "eslint_config",
+      "eslint_config_eslintconfig"
+    ],
+    "18": [
+      "lib_utils",
+      "lib_utils_cn"
+    ],
+    "19": [
+      "next_config",
+      "next_config_nextconfig"
+    ],
+    "20": [
+      "postcss_config",
+      "postcss_config_config"
+    ]
+  },
+  "cohesion": {
+    "0": 0.09523809523809523,
+    "1": 0.14736842105263157,
+    "2": 0.1368421052631579,
+    "3": 0.10526315789473684,
+    "4": 0.10526315789473684,
+    "5": 0.16176470588235295,
+    "6": 0.14285714285714285,
+    "7": 0.18181818181818182,
+    "8": 0.2,
+    "9": 0.2222222222222222,
+    "10": 0.3333333333333333,
+    "11": 0.4666666666666667,
+    "12": 0.5,
+    "13": 0.6666666666666666,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0,
+    "19": 1.0,
+    "20": 1.0
+  },
+  "gods": [
+    {
+      "id": "tsconfig_compileroptions",
+      "label": "compilerOptions",
+      "degree": 16
+    },
+    {
+      "id": "agent_skills_ui_ux_pro_max_scripts_design_system_designsystemgenerator",
+      "label": "DesignSystemGenerator",
+      "degree": 11
+    },
+    {
+      "id": "agent_skills_ui_ux_pro_max_scripts_core_search_csv",
+      "label": "_search_csv()",
+      "degree": 8
+    },
+    {
+      "id": "logicware",
+      "label": "Logicware",
+      "degree": 8
+    },
+    {
+      "id": "agent_skills_ui_ux_pro_max_scripts_core_bm25",
+      "label": "BM25",
+      "degree": 7
+    },
+    {
+      "id": "agent_skills_ui_ux_pro_max_scripts_core_search",
+      "label": "search()",
+      "degree": 7
+    },
+    {
+      "id": "agent_skills_ui_ux_pro_max_scripts_design_system_generate_design_system",
+      "label": "generate_design_system()",
+      "degree": 7
+    },
+    {
+      "id": "tsconfig_include",
+      "label": "include",
+      "degree": 7
+    },
+    {
+      "id": "agent_skills_ui_ux_pro_max_scripts_design_system_persist_design_system",
+      "label": "persist_design_system()",
+      "degree": 5
+    },
+    {
+      "id": "agent_skills_ui_ux_pro_max_scripts_design_system_generate_intelligent_overrides",
+      "label": "_generate_intelligent_overrides()",
+      "degree": 5
+    }
+  ],
+  "surprises": [
+    {
+      "source": "_generate_intelligent_overrides()",
+      "target": "search()",
+      "source_files": [
+        ".agent/skills/ui-ux-pro-max/scripts/design_system.py",
+        ".agent/skills/ui-ux-pro-max/scripts/core.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "Preloader()",
+      "target": "setGlobalInitialLoadComplete()",
+      "source_files": [
+        "components/Preloader.tsx",
+        "utils/store.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `dependencies` connect `Community 0` to `Community 9`?",
+      "why": "High betweenness centrality (0.040) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `devDependencies` connect `Community 3` to `Community 9`?",
+      "why": "High betweenness centrality (0.037) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `DesignSystemGenerator` connect `Community 5` to `Community 2`?",
+      "why": "High betweenness centrality (0.024) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `PILLARS`, `SERVICES`, `plusJakartaSans` to the rest of the system?",
+      "why": "72 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 0` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.09523809523809523 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 1` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.14736842105263157 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 2` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.1368421052631579 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

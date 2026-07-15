@@ -1,0 +1,134 @@
+{
+  "nodes": [
+    {
+      "id": "logicware",
+      "label": "Logicware",
+      "source_file": "LogicWare company profile.md"
+    },
+    {
+      "id": "digital_transformation",
+      "label": "Digital Transformation",
+      "source_file": "LogicWare company profile.md"
+    },
+    {
+      "id": "enterprise_solutions",
+      "label": "Enterprise Solutions",
+      "source_file": "LogicWare company profile.md"
+    },
+    {
+      "id": "artificial_intelligence",
+      "label": "Artificial Intelligence",
+      "source_file": "LogicWare company profile.md"
+    },
+    {
+      "id": "information_security",
+      "label": "Information Security",
+      "source_file": "LogicWare company profile.md"
+    },
+    {
+      "id": "compliance",
+      "label": "Compliance",
+      "source_file": "LogicWare company profile.md"
+    },
+    {
+      "id": "governance_risk",
+      "label": "Governance & Risk",
+      "source_file": "LogicWare company profile.md"
+    },
+    {
+      "id": "business_process_automation",
+      "label": "Business Process Automation",
+      "source_file": "LogicWare company profile.md"
+    },
+    {
+      "id": "iso_27001",
+      "label": "ISO 27001",
+      "source_file": "LogicWare company profile.md"
+    },
+    {
+      "id": "dpdpa_compliance",
+      "label": "DPDPA Compliance",
+      "source_file": "LogicWare company profile.md"
+    },
+    {
+      "id": "security_by_design",
+      "label": "Security by Design",
+      "source_file": "LogicWare company profile.md"
+    }
+  ],
+  "edges": [
+    {
+      "source": "logicware",
+      "target": "digital_transformation",
+      "relation": "offers",
+      "confidence": "EXTRACTED",
+      "source_file": "LogicWare company profile.md"
+    },
+    {
+      "source": "logicware",
+      "target": "enterprise_solutions",
+      "relation": "offers",
+      "confidence": "EXTRACTED",
+      "source_file": "LogicWare company profile.md"
+    },
+    {
+      "source": "logicware",
+      "target": "artificial_intelligence",
+      "relation": "offers",
+      "confidence": "EXTRACTED",
+      "source_file": "LogicWare company profile.md"
+    },
+    {
+      "source": "logicware",
+      "target": "information_security",
+      "relation": "offers",
+      "confidence": "EXTRACTED",
+      "source_file": "LogicWare company profile.md"
+    },
+    {
+      "source": "logicware",
+      "target": "compliance",
+      "relation": "offers",
+      "confidence": "EXTRACTED",
+      "source_file": "LogicWare company profile.md"
+    },
+    {
+      "source": "logicware",
+      "target": "governance_risk",
+      "relation": "offers",
+      "confidence": "EXTRACTED",
+      "source_file": "LogicWare company profile.md"
+    },
+    {
+      "source": "logicware",
+      "target": "business_process_automation",
+      "relation": "offers",
+      "confidence": "EXTRACTED",
+      "source_file": "LogicWare company profile.md"
+    },
+    {
+      "source": "logicware",
+      "target": "security_by_design",
+      "relation": "has philosophy",
+      "confidence": "EXTRACTED",
+      "source_file": "LogicWare company profile.md"
+    },
+    {
+      "source": "information_security",
+      "target": "iso_27001",
+      "relation": "includes",
+      "confidence": "EXTRACTED",
+      "source_file": "LogicWare company profile.md"
+    },
+    {
+      "source": "compliance",
+      "target": "dpdpa_compliance",
+      "relation": "includes",
+      "confidence": "EXTRACTED",
+      "source_file": "LogicWare company profile.md"
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": 1000,
+  "output_tokens": 500
+}

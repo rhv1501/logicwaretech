@@ -40,10 +40,10 @@ export default function RootLayout({
       className={`${plusJakartaSans.variable} ${spaceGrotesk.variable} ${playfair.variable} h-full antialiased light`}
       style={{ colorScheme: 'light' }}
     >
-      <body className="min-h-full flex flex-col bg-[#FAF8F5] text-[#111111] selection:bg-[#0B2447] selection:text-white relative">
+      <body className="min-h-full flex flex-col text-[#0a2540] selection:bg-[#1a8d5f] selection:text-white relative font-sans">
         <SmoothScrolling>
           {/* Clean Corporate Background */}
-          <div className="fixed inset-0 pointer-events-none -z-10 bg-white" />
+          <div className="fixed inset-0 pointer-events-none -z-10 bg-transparent" />
           <Preloader />
           <CustomCursor />
           <Navbar />

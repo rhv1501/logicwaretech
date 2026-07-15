@@ -103,7 +103,7 @@ const SERVICES = [
 
 export default function CompliancePage() {
   return (
-    <div className="flex flex-col w-full bg-white text-slate-800 overflow-hidden font-sans">
+    <div className="flex flex-col w-full bg-transparent text-slate-800 overflow-hidden font-sans">
       
       {/* 1. HERO */}
       <section className="relative w-full pt-40 pb-24 px-6 flex flex-col items-center justify-center text-center border-b border-slate-100 overflow-hidden">
@@ -141,7 +141,7 @@ export default function CompliancePage() {
       </section>
 
       {/* 2. PILLARS (HERO FRAMEWORKS) */}
-      <section className="w-full py-24 bg-white relative border-b border-slate-100">
+      <section className="w-full py-24 bg-transparent relative border-b border-slate-100">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Our Core Pillars</h2>
@@ -180,7 +180,7 @@ export default function CompliancePage() {
       </section>
 
       {/* 3. CORE SERVICES BREAKDOWN (GRID) */}
-      <section className="w-full py-24 bg-slate-50 relative">
+      <section className="w-full py-24 bg-transparent relative">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">What We Do For You</h2>
@@ -225,7 +225,7 @@ export default function CompliancePage() {
       </section>
       
       {/* CTA */}
-      <section className="w-full py-24 bg-white text-center px-6 border-t border-slate-100">
+      <section className="w-full py-24 bg-transparent text-center px-6 border-t border-slate-100">
         <h2 className="text-4xl font-bold text-slate-900 mb-6 tracking-tight">Ready to Secure Your Business?</h2>
         <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-10">Don't let security checks slow down your sales. Let's get you certified and protected.</p>
         <Link href="/contact" className="bg-primary hover:bg-primary/90 text-white px-10 py-5 rounded-xl font-semibold text-lg transition-transform hover:scale-105 flex mx-auto w-max items-center justify-center gap-2 shadow-pastel-soft">

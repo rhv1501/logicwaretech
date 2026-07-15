@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const ARCHITECTURES = [
   {
-    id: "ai-systems",
+    id: "ai",
     title: "AI Agentic Systems",
     desc: "Deploy autonomous AI workers that go beyond basic chatbots. They can actually reason, make decisions, and execute complete business workflows for you 24/7.",
     icon: <Robot weight="fill" size={40} />,
@@ -17,7 +17,7 @@ const ARCHITECTURES = [
     deliverables: ["Custom AI Chatbots", "Automated Task Helpers", "Smart Data Organization", "24/7 Customer Support Bots"]
   },
   {
-    id: "erp-crm",
+    id: "es",
     title: "ERP & CRM Workflows",
     desc: "We connect your sales tools and operations so everything runs smoothly. No more lost leads or manual typing.",
     icon: <Database weight="fill" size={40} />,
@@ -27,7 +27,7 @@ const ARCHITECTURES = [
     deliverables: ["Sales Automation Setup", "Connecting Your Apps", "Customer Data Organization", "Safe Data Transfers"]
   },
   {
-    id: "web-apps",
+    id: "web",
     title: "Web Applications",
     desc: "Fast, beautiful, and easy-to-use websites designed specifically to turn your visitors into paying customers.",
     icon: <Desktop weight="fill" size={40} />,
@@ -37,7 +37,7 @@ const ARCHITECTURES = [
     deliverables: ["Fast Loading Websites", "E-Commerce Stores", "Easy-to-Read Dashboards", "Customer Portals"]
   },
   {
-    id: "mobile-apps",
+    id: "mobile",
     title: "Mobile Applications",
     desc: "Build your own branded mobile app so your customers can buy, book, or connect with you right from their phones.",
     icon: <DeviceMobile weight="fill" size={40} />,
@@ -47,7 +47,7 @@ const ARCHITECTURES = [
     deliverables: ["iPhone App Development", "Android App Development", "Mobile Payment Setup", "Real-Time Updates"]
   },
   {
-    id: "custom-software",
+    id: "custom",
     title: "Custom Software",
     desc: "Stop forcing your team to use software that doesn't fit. We build exact solutions tailored to how your business actually runs.",
     icon: <Code weight="fill" size={40} />,
@@ -60,7 +60,7 @@ const ARCHITECTURES = [
 
 export default function ServicesPage() {
   return (
-    <div className="flex flex-col w-full bg-white text-slate-800 overflow-hidden font-sans">
+    <div className="flex flex-col w-full bg-transparent text-slate-800 overflow-hidden font-sans">
       
       {/* 1. HERO */}
       <section className="relative w-full pt-40 pb-24 px-6 flex flex-col items-center justify-center text-center border-b border-slate-100 overflow-hidden">
@@ -98,7 +98,7 @@ export default function ServicesPage() {
       </section>
 
       {/* 2. THE SERVICES ARCHITECTURES */}
-      <section className="w-full py-24 bg-slate-50 relative">
+      <section className="w-full py-24 bg-transparent relative">
         <div className="max-w-[1200px] mx-auto px-6 flex flex-col gap-16">
           
           {ARCHITECTURES.map((arch, idx) => (
@@ -108,38 +108,46 @@ export default function ServicesPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
-              className="bg-white rounded-[2rem] border border-slate-100 shadow-sm flex flex-col md:flex-row overflow-hidden group hover:shadow-pastel-float transition-shadow duration-500"
             >
-              {/* Image Side - Alternating */}
-              <div className={`w-full md:w-1/2 relative min-h-[300px] md:min-h-[400px] bg-slate-100 overflow-hidden ${idx % 2 !== 0 ? 'md:order-2' : ''}`}>
-                <Image 
-                  src={arch.image}
-                  alt={arch.title}
-                  fill
-                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-in-out"
-                />
-              </div>
-
-              {/* Content Side */}
-              <div className="w-full md:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col items-start justify-center bg-white">
-                <div className={`w-16 h-16 rounded-2xl ${arch.color} ${arch.textColor} flex items-center justify-center mb-6`}>
-                  {arch.icon}
+              <Link
+                href={`/services/${arch.id}`}
+                className="bg-white rounded-[2rem] border border-slate-100 shadow-sm flex flex-col md:flex-row overflow-hidden group hover:shadow-pastel-float hover:-translate-y-1 transition-all duration-500 block"
+              >
+                {/* Image Side - Alternating */}
+                <div className={`w-full md:w-1/2 relative min-h-[300px] md:min-h-[400px] bg-slate-100 overflow-hidden ${idx % 2 !== 0 ? 'md:order-2' : ''}`}>
+                  <Image 
+                    src={arch.image}
+                    alt={arch.title}
+                    fill
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                  />
                 </div>
-                <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 leading-tight mb-4">{arch.title}</h2>
-                <p className="text-lg text-slate-600 leading-relaxed mb-8">{arch.desc}</p>
-                
-                <div className="w-full pt-6 border-t border-slate-100">
-                  <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">Key Deliverables</h3>
-                  <div className="flex flex-col gap-4">
-                    {arch.deliverables.map((item, i) => (
-                      <div key={i} className="flex items-start gap-3">
-                        <CheckCircle weight="fill" className={`${arch.textColor} shrink-0 mt-1`} size={20} />
-                        <span className="text-slate-800 font-semibold">{item}</span>
-                      </div>
-                    ))}
+
+                {/* Content Side */}
+                <div className="w-full md:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col items-start justify-center bg-white">
+                  <div className={`w-16 h-16 rounded-2xl ${arch.color} ${arch.textColor} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500`}>
+                    {arch.icon}
+                  </div>
+                  <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 leading-tight mb-4 group-hover:text-blue-600 transition-colors">{arch.title}</h2>
+                  <p className="text-lg text-slate-600 leading-relaxed mb-8">{arch.desc}</p>
+                  
+                  <div className="w-full pt-6 border-t border-slate-100">
+                    <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">Key Deliverables</h3>
+                    <div className="flex flex-col gap-4">
+                      {arch.deliverables.map((item, i) => (
+                        <div key={i} className="flex items-start gap-3">
+                          <CheckCircle weight="fill" className={`${arch.textColor} shrink-0 mt-1`} size={20} />
+                          <span className="text-slate-800 font-semibold">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="mt-10 inline-flex items-center gap-2 font-bold text-blue-600 group-hover:text-blue-700 transition-colors">
+                    View full details <ArrowRight weight="bold" />
                   </div>
                 </div>
-              </div>
+              </Link>
             </motion.div>
           ))}
 
@@ -147,7 +155,7 @@ export default function ServicesPage() {
       </section>
       
       {/* CTA */}
-      <section className="w-full py-24 bg-white text-center px-6 border-t border-slate-100">
+      <section className="w-full py-24 bg-transparent text-center px-6 border-t border-slate-100">
         <h2 className="text-4xl font-bold text-slate-900 mb-6 tracking-tight">Ready to Grow?</h2>
         <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-10">Stop struggling with bad software and endless manual tasks. Let's build something great.</p>
         <Link href="/contact" className="bg-primary hover:bg-primary/90 text-white px-10 py-5 rounded-xl font-semibold text-lg transition-transform hover:scale-105 flex mx-auto w-max items-center justify-center gap-2 shadow-pastel-soft">

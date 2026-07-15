@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col w-full bg-white text-slate-800 overflow-hidden font-sans">
+    <div className="flex flex-col w-full bg-transparent text-slate-800 overflow-hidden font-sans">
       
       {/* 1. CORPORATE HERO */}
       <section className="relative w-full pt-40 pb-24 px-6 flex flex-col items-center justify-center text-center border-b border-slate-100 overflow-hidden">
@@ -45,7 +45,7 @@ export default function AboutPage() {
       </section>
 
       {/* 2. CORE PRINCIPLES */}
-      <section className="w-full py-24 bg-slate-50 relative border-b border-slate-100">
+      <section className="w-full py-24 bg-transparent relative border-b border-slate-100">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Our Ethos</h2>
@@ -81,7 +81,7 @@ export default function AboutPage() {
       </section>
 
       {/* 3. THE ARCHITECTURE BOARD */}
-      <section className="w-full py-24 bg-white relative">
+      <section className="w-full py-24 bg-transparent relative">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Leadership</h2>
