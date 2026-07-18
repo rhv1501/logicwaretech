@@ -51,14 +51,22 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center hover:opacity-80 transition-opacity shrink-0 py-2"
+            className="flex items-center gap-3 hover:opacity-80 transition-opacity shrink-0 py-2"
             onClick={() => setIsOpen(false)}
           >
             <img 
               src="/logo.png" 
-              alt="LogicWare Tech" 
+              alt="LogicWare Tech Logo" 
               className="h-10 sm:h-14 w-auto object-contain" 
             />
+            <div className="flex flex-col justify-center">
+              <span className="text-[1.1rem] sm:text-xl font-bold leading-tight tracking-tight text-[#0a2540]">
+                Logicware Tech
+              </span>
+              <span className="text-[0.65rem] sm:text-[0.7rem] font-semibold tracking-[0.1em] text-[#84b5fd] uppercase mt-0.5">
+                Innovate. Automate. Elevate.
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Nav */}

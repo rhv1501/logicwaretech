@@ -1,60 +1,100 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle, Robot, Database, Desktop, DeviceMobile, Code, ArrowRight } from "@phosphor-icons/react/dist/ssr";
+import { CheckCircle, Robot, Database, Desktop, DeviceMobile, Code, ArrowRight, ArrowsMerge, ShieldCheck, Stack, Bank } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
 import Image from "next/image";
 
 const ARCHITECTURES = [
   {
-    id: "ai",
-    title: "AI Agentic Systems",
-    desc: "Deploy autonomous AI workers that go beyond basic chatbots. They can actually reason, make decisions, and execute complete business workflows for you 24/7.",
-    icon: <Robot weight="fill" size={40} />,
+    id: "dt",
+    title: "Business Process Automations",
+    desc: "Modernization, automation, and process optimization to streamline your business operations.",
+    icon: <ArrowsMerge weight="fill" size={40} />,
     color: "bg-pastel-blue",
     textColor: "text-[#4F46E5]",
-    image: "/images/services/ai.png",
-    deliverables: ["Custom AI Chatbots", "Automated Task Helpers", "Smart Data Organization", "24/7 Customer Support Bots"]
+    image: "/images/services/dt.png",
+    deliverables: ["Workflow Modernization", "Process Automation", "System Integrations", "Operational Efficiency"]
   },
   {
     id: "es",
-    title: "ERP & CRM Workflows",
-    desc: "We connect your sales tools and operations so everything runs smoothly. No more lost leads or manual typing.",
+    title: "Enterprise Solutions",
+    desc: "Custom ERP, CRM, HRMS platforms, portals, mobile apps, and custom software tailored to your needs.",
     icon: <Database weight="fill" size={40} />,
     color: "bg-pastel-purple",
     textColor: "text-[#9333EA]",
-    image: "/images/services/erp.png",
-    deliverables: ["Sales Automation Setup", "Connecting Your Apps", "Customer Data Organization", "Safe Data Transfers"]
+    image: "/images/services/es.png",
+    deliverables: ["Custom ERPs", "CRM Implementations", "HRMS Platforms", "Enterprise Portals"]
+  },
+  {
+    id: "ai",
+    title: "Artificial Intelligence",
+    desc: "AI integrations, intelligent automation, and custom LLM routing designed for 24/7 autonomous operations.",
+    icon: <Robot weight="fill" size={40} />,
+    color: "bg-pastel-mint",
+    textColor: "text-[#059669]",
+    image: "/images/services/ai.png",
+    deliverables: ["Custom AI Chatbots", "Automated Task Helpers", "Smart Data Organization", "24/7 Support Bots"]
+  },
+  {
+    id: "is",
+    title: "Information Security",
+    desc: "ISO 27001 consulting and ISMS implementation built with a secure-by-design philosophy.",
+    icon: <ShieldCheck weight="fill" size={40} />,
+    color: "bg-pastel-peach",
+    textColor: "text-[#EA580C]",
+    image: "/images/services/is.png",
+    deliverables: ["ISO 27001 Consulting", "ISMS Implementation", "Security Architecture", "Vulnerability Management"]
+  },
+  {
+    id: "comp",
+    title: "Compliance",
+    desc: "End-to-end DPDPA implementation, consent management, and data privacy governance.",
+    icon: <Stack weight="fill" size={40} />,
+    color: "bg-slate-200",
+    textColor: "text-slate-700",
+    image: "/images/services/comp.png",
+    deliverables: ["DPDPA Implementation", "Consent Management", "Data Privacy Governance", "Compliance Audits"]
+  },
+  {
+    id: "gr",
+    title: "Governance & Risk",
+    desc: "Comprehensive risk assessments and governance frameworks for enterprise assurance.",
+    icon: <Bank weight="fill" size={40} />,
+    color: "bg-pastel-blue",
+    textColor: "text-[#4F46E5]",
+    image: "/images/services/gr.png",
+    deliverables: ["Risk Assessments", "Governance Frameworks", "Enterprise Assurance", "Policy Development"]
   },
   {
     id: "web",
     title: "Web Applications",
-    desc: "Fast, beautiful, and easy-to-use websites designed specifically to turn your visitors into paying customers.",
+    desc: "Fast, beautiful, and highly-optimized websites. We use modern frameworks to deliver sub-second load times.",
     icon: <Desktop weight="fill" size={40} />,
-    color: "bg-pastel-mint",
-    textColor: "text-[#059669]",
+    color: "bg-pastel-purple",
+    textColor: "text-[#9333EA]",
     image: "/images/services/web.png",
-    deliverables: ["Fast Loading Websites", "E-Commerce Stores", "Easy-to-Read Dashboards", "Customer Portals"]
+    deliverables: ["Fast Loading Websites", "E-Commerce Stores", "Custom Dashboards", "Customer Portals"]
   },
   {
     id: "mobile",
     title: "Mobile Applications",
-    desc: "Build your own branded mobile app so your customers can buy, book, or connect with you right from their phones.",
+    desc: "Build your own branded mobile app for a premium experience right on their phones. Native performance with elegant UI.",
     icon: <DeviceMobile weight="fill" size={40} />,
-    color: "bg-pastel-peach",
-    textColor: "text-[#EA580C]",
+    color: "bg-pastel-mint",
+    textColor: "text-[#059669]",
     image: "/images/services/mobile.png",
     deliverables: ["iPhone App Development", "Android App Development", "Mobile Payment Setup", "Real-Time Updates"]
   },
   {
     id: "custom",
     title: "Custom Software",
-    desc: "Stop forcing your team to use software that doesn't fit. We build exact solutions tailored to how your business actually runs.",
+    desc: "Exact solutions for unique business needs. No cookie-cutter software. From logic algorithms to supply chain tools.",
     icon: <Code weight="fill" size={40} />,
-    color: "bg-slate-200",
-    textColor: "text-slate-700",
+    color: "bg-pastel-peach",
+    textColor: "text-[#EA580C]",
     image: "/images/services/custom.png",
-    deliverables: ["Updating Old Systems", "Connecting Different Tools", "Custom Internal Tools", "Automating Daily Tasks"]
+    deliverables: ["Updating Legacy Systems", "API Integrations", "Custom Internal Tools", "Automating Daily Tasks"]
   }
 ];
 

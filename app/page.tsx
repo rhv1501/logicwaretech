@@ -590,8 +590,14 @@ export default function Home() {
            <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full blur-[100px] opacity-60 -translate-y-1/2 translate-x-1/2 pointer-events-none" />
            <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#f8fafc] rounded-full blur-[100px] opacity-60 translate-y-1/2 -translate-x-1/2 pointer-events-none" />
            
-           <div className="relative z-10 w-full bg-white/50 backdrop-blur-sm rounded-3xl p-6 md:p-12 border border-blue-100/50 shadow-inner">
-             <MermaidChart chart={MANUFACTURING_MERMAID_CODE} />
+           <div className="relative z-10 w-full bg-white/95 backdrop-blur-sm rounded-3xl p-3 border border-white/10 shadow-[0_20px_50px_-15px_rgba(132,181,253,0.3)] overflow-hidden">
+             <Image 
+               src="/manu.jpeg" 
+               alt="Enterprise Manufacturing Workflow" 
+               width={1600}
+               height={900}
+               className="w-full h-auto rounded-[1.5rem] object-cover"
+             />
            </div>
         </div>
       </section>

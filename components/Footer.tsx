@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="mx-auto max-w-[1200px] flex flex-col gap-16 md:flex-row md:justify-between relative z-10">
         <div className="flex flex-col gap-8 max-w-sm">
           <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
-            <Image src="/logo.png" alt="LogicWare Tech" width={180} height={180} className="w-28 md:w-36 h-auto object-contain" />
+            <Image src="/logo2.png" alt="LogicWare Tech" width={180} height={180} className="w-40 md:w-48 h-auto object-contain" />
           </Link>
           <p className="text-slate-500 text-sm font-medium leading-relaxed max-w-sm mt-6">
             Pioneering the future of business operations through custom AI integrations, ERP modules, and enterprise web applications.
@@ -34,7 +34,7 @@ export default function Footer() {
       </div>
       <div className="mx-auto max-w-[1200px] mt-24 flex flex-col md:flex-row items-center justify-between border-t border-slate-100 pt-8 text-xs font-bold uppercase tracking-widest text-slate-400 gap-4">
         <p>© {new Date().getFullYear()} LogicWare Technologies LLP.</p>
-        <p>Intelligent Automation.</p>
+        <p>Innovate. Automate. Elevate.</p>
       </div>
     </footer>
   );
