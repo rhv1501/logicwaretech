@@ -25,6 +25,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://logicwaretech.com'),
   title: "LogicWare Tech | AI Automations, ERP Solutions & Custom Web Applications",
   description: "LogicWare Tech is a premier IT firm specializing in business workflow automations, custom AI integrations, CRM/ERP solutions, and robust web/mobile applications.",
   icons: {
@@ -37,6 +38,24 @@ export const metadata: Metadata = {
     ],
   },
   manifest: '/site.webmanifest',
+  openGraph: {
+    title: "LogicWare Tech | AI Automations, ERP Solutions & Custom Web Applications",
+    description: "LogicWare Tech is a premier IT firm specializing in business workflow automations, custom AI integrations, CRM/ERP solutions, and robust web/mobile applications.",
+    images: [
+      {
+        url: "/hero.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "LogicWare Tech Hero",
+      }
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "LogicWare Tech | AI Automations, ERP Solutions & Custom Web Applications",
+    description: "LogicWare Tech is a premier IT firm specializing in business workflow automations, custom AI integrations, CRM/ERP solutions, and robust web/mobile applications.",
+    images: ["/hero.jpeg"],
+  },
 };
 
 export default function RootLayout({

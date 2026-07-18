@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { 
   ArrowRight, CheckCircle, Robot, Database, Desktop, DeviceMobile, 
   Code, ArrowsMerge, ShieldCheck, Stack, Bank, XCircle, ChartLineUp
@@ -206,6 +207,33 @@ const SERVICES_DATA = {
     workflowImage: "/images/workflows/ai.png"
   }
 };
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const service = SERVICES_DATA[id as keyof typeof SERVICES_DATA];
+
+  if (!service) {
+    return { title: 'Service Not Found' };
+  }
+
+  return {
+    title: `${service.title} | LogicWare Tech`,
+    description: service.desc,
+    openGraph: {
+      title: `${service.title} | LogicWare Tech`,
+      description: service.desc,
+      url: `https://logicwaretech.com/services/${id}`,
+      images: [
+        {
+          url: service.image,
+          width: 800,
+          height: 600,
+          alt: service.title,
+        }
+      ]
+    },
+  };
+}
 
 export default async function ServiceLandingPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
