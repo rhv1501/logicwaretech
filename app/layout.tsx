@@ -28,6 +28,9 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://logicwaretech.com'),
   title: "LogicWare Tech | AI Automations, ERP Solutions & Custom Web Applications",
   description: "LogicWare Tech is a premier IT firm specializing in business workflow automations, custom AI integrations, CRM/ERP solutions, and robust web/mobile applications.",
+  verification: {
+    google: "iHrBlxQOmJWZTSuElN5lKDSTQcgdIVF__FgB89VCMmQ",
+  },
   icons: {
     icon: [
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
