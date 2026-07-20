@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Plus_Jakarta_Sans, Space_Grotesk, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -72,6 +73,20 @@ export default function RootLayout({
       className={`${plusJakartaSans.variable} ${spaceGrotesk.variable} ${playfair.variable} h-full antialiased light`}
       style={{ colorScheme: 'light' }}
     >
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-BTG4NJKXFZ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-BTG4NJKXFZ');
+          `}
+        </Script>
+      </head>
       <body className="min-h-full flex flex-col text-[#0a2540] selection:bg-[#1a8d5f] selection:text-white relative font-sans">
         <SmoothScrolling>
           {/* Clean Corporate Background */}
