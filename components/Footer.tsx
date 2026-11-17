@@ -21,6 +21,7 @@ export default function Footer() {
           <div className="flex flex-col gap-6">
             <span className="text-xs font-bold uppercase tracking-widest text-primary">Platform</span>
             <Link href="/" className="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors">Home</Link>
+            <Link href="/odoo" className="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors">Odoo ERP Solutions</Link>
             <Link href="/about" className="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors">About Us</Link>
             <Link href="/services" className="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors">Services</Link>
             <Link href="/contact" className="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors">Contact Us</Link>

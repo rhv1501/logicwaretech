@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, ArrowDown, Robot, Database, Desktop, CheckCircle, Users, ChartLineUp, ChartBar, XCircle, ShoppingCart, Factory, Heartbeat, Bank, Storefront, Timer, DeviceMobile, Code, CaretDown, ShieldCheck, Stack, ArrowsMerge, LockKey, Envelope, Phone } from "@phosphor-icons/react/dist/ssr";
+import { ArrowRight, ArrowDown, Robot, Database, Desktop, CheckCircle, Users, ChartLineUp, ChartBar, XCircle, ShoppingCart, Factory, Heartbeat, Bank, Storefront, Timer, DeviceMobile, Code, CaretDown, ShieldCheck, Stack, ArrowsMerge, LockKey, Envelope, Phone, Certificate, Package, Receipt } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
@@ -183,7 +183,7 @@ export default function Home() {
           <div className="lg:col-span-6 flex flex-col items-start text-left relative z-20">
             <div className="inline-flex items-center gap-2 mb-6 text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#84b5fd] bg-[#84b5fd]/10 px-4 py-1.5 rounded-full border border-[#84b5fd]/20">
               <span className="w-1.5 h-1.5 rounded-full bg-[#84b5fd] animate-pulse" />
-              India's Premier Enterprise Software Partner
+              India&apos;s Premier Enterprise Software Partner
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[#0a2540] leading-[1.05] mb-6">
@@ -323,6 +323,133 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 3.1 ODOO ERP SPOTLIGHT (OFFICIAL PARTNER) */}
+      <section className="w-full py-20 md:py-28 px-4 sm:px-6 max-w-[1400px] mx-auto border-t border-slate-200/50">
+        <div className="bg-gradient-to-br from-blue-50/70 via-white to-indigo-50/40 rounded-[2.5rem] border border-blue-100/80 p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-sm">
+          
+          {/* Ambient Lighting */}
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#84b5fd]/15 rounded-full blur-[120px] pointer-events-none -translate-y-1/2 translate-x-1/3" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-[0.03] pointer-events-none" />
+
+          {/* Header */}
+          <div className="text-center max-w-3xl mx-auto mb-16 relative z-10">
+            <div className="inline-flex items-center gap-2 bg-white border border-[#84b5fd]/30 shadow-sm px-4 py-1.5 rounded-full mb-4">
+              <span className="flex h-2 w-2 relative">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
+              </span>
+              <span className="text-xs font-bold uppercase tracking-wider text-[#0a2540]">
+                Official Odoo Partner
+              </span>
+              <span className="text-slate-300">•</span>
+              <span className="text-xs font-semibold text-slate-500">
+                Certified Implementation & Customization
+              </span>
+            </div>
+
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0a2540] tracking-tight">
+              One Software to Run Your Entire Company. <br className="hidden sm:block"/>
+              <span className="italic text-[#84b5fd]">Customized for How You Actually Work.</span>
+            </h3>
+
+            <p className="mt-5 text-base sm:text-lg text-slate-600 font-medium leading-relaxed">
+              Stop paying for 10 disconnected tools. Odoo unifies your <strong className="text-[#0a2540] font-bold">Sales, CRM, Invoicing, Inventory, Manufacturing, and HR</strong> into one smooth, cloud-based platform. As an Official Odoo Partner, Logicware Tech designs and builds custom workflows so it fits your company 100%.
+            </p>
+          </div>
+
+          {/* 6 Key Modules Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10 mb-12">
+            
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all">
+              <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold mb-4">
+                <ChartLineUp weight="fill" size={24} />
+              </div>
+              <h4 className="text-lg font-bold text-[#0a2540] mb-1.5">Sales & CRM</h4>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Capture inquiries from WhatsApp and your website. Generate instant professional quotes and track sales rep follow-ups in one view.
+              </p>
+            </div>
+
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all">
+              <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold mb-4">
+                <Receipt weight="fill" size={24} />
+              </div>
+              <h4 className="text-lg font-bold text-[#0a2540] mb-1.5">Invoicing & GST Accounting</h4>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Indian GST-compliant e-invoicing with QR codes, 1-click bank reconciliation, and real-time Profit & Loss without manual voucher entries.
+              </p>
+            </div>
+
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all">
+              <div className="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center font-bold mb-4">
+                <Package weight="fill" size={24} />
+              </div>
+              <h4 className="text-lg font-bold text-[#0a2540] mb-1.5">Live Multi-Warehouse Inventory</h4>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Live stock levels across all godowns and branches. Barcode scanning on mobile phones, automated re-ordering, and zero stockouts.
+              </p>
+            </div>
+
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all">
+              <div className="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center font-bold mb-4">
+                <Factory weight="fill" size={24} />
+              </div>
+              <h4 className="text-lg font-bold text-[#0a2540] mb-1.5">Manufacturing (MRP)</h4>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Multi-level Bill of Materials (BOM), shop-floor tablet mode, work center schedules, and raw material scrap tracking without paper.
+              </p>
+            </div>
+
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all">
+              <div className="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold mb-4">
+                <Users weight="fill" size={24} />
+              </div>
+              <h4 className="text-lg font-bold text-[#0a2540] mb-1.5">HR & Automated Payroll</h4>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Sync thumb biometric machines directly to attendance. Track employee leaves, expense claims, and generate automated salary slips.
+              </p>
+            </div>
+
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all">
+              <div className="w-12 h-12 rounded-xl bg-cyan-50 text-cyan-600 flex items-center justify-center font-bold mb-4">
+                <Desktop weight="fill" size={24} />
+              </div>
+              <h4 className="text-lg font-bold text-[#0a2540] mb-1.5">B2B Dealer & Client Portal</h4>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Give your wholesale dealers and customers 24/7 self-service access to place orders, check live credit limits, and download invoices.
+              </p>
+            </div>
+
+          </div>
+
+          {/* Logicware Customization Advantage Card & "More" Button */}
+          <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-6 relative z-10">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <div className="w-12 h-12 rounded-2xl bg-blue-100 text-blue-700 flex items-center justify-center shrink-0">
+                <Certificate weight="fill" size={28} />
+              </div>
+              <div>
+                <h4 className="font-bold text-[#0a2540] text-lg">Why Logicware Tech for Odoo?</h4>
+                <p className="text-sm text-slate-600 font-medium mt-0.5">
+                  We don&apos;t just set up standard software — we write custom Python modules, migrate your Tally & Excel data with <strong>zero downtime</strong>, and train your staff until they are 100% confident.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3 shrink-0 w-full sm:w-auto">
+              <Link 
+                href="/odoo"
+                className="w-full sm:w-auto bg-[#84b5fd] hover:bg-blue-600 text-white px-7 py-3.5 rounded-xl text-sm font-bold shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 group"
+              >
+                <span>Explore Odoo ERP & Compare Systems</span>
+                <ArrowRight weight="bold" className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       {/* 3.5 USER TYPES & ROLE ARCHITECTURE */}
       <section className="w-full py-20 px-4 sm:px-6 max-w-[1400px] mx-auto border-t border-slate-200/50">
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -383,7 +510,7 @@ export default function Home() {
                 <Storefront weight="fill" size={24} />
               </div>
               <h4 className="text-white font-bold text-lg mb-2">Apps Talking Together</h4>
-              <p className="text-slate-300 text-sm leading-relaxed mb-6">We make your different software tools "talk" to each other so information flows magically in the background.</p>
+              <p className="text-slate-300 text-sm leading-relaxed mb-6">We make your different software tools &quot;talk&quot; to each other so information flows magically in the background.</p>
               <div className="flex flex-col gap-2">
                 <div className="text-xs font-bold text-blue-300 bg-blue-500/10 px-3 py-1.5 rounded-lg border border-blue-500/20 w-fit">Perfect Sync</div>
                 <div className="text-xs font-bold text-white bg-white/5 px-3 py-1.5 rounded-lg border border-white/10 w-fit">No typos</div>

@@ -8,6 +8,7 @@ import Image from "next/image";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
+  { href: "/odoo", label: "Odoo ERP" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
   { 
